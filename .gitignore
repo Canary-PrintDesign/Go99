@@ -7,8 +7,13 @@
 # Ignore bundler config
 /.bundle
 
+/node_modules
+
 # Ignore the build directory
 /build
+
+# Ignore webpack temporary build location
+.tmp
 
 # Ignore cache
 /.sass-cache
