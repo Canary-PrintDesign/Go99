@@ -1,0 +1,29 @@
+// Adds a matching background and border-color
+@mixin colored-button($color: $white, $color-bg: $black, $color-border: $white, $color-active: shade($color, 20%), $color-bg-active: shade($color-bg, 20%), $color-border-active: shade($color-border, 20%)) {
+  color: $color;
+  background: $color-bg;
+  border-color: $color-border;
+
+  &:hover {
+    color: $color;
+    background: $color-bg-active;
+    border-color: $color-border-active;
+  }
+}
+
+.btn,
+button {
+  @include appearance(none);
+  @include colored-button;
+  padding: 0.7em;
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-decoration: none;
+
+  &.btn-primary.btn-outline {
+    @include colored-button($color-primary, transparent, $color-primary);
+  }
+}
