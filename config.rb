@@ -1,5 +1,9 @@
 ENV['WEBPACK_ENV'] ||= (build? ? 'build' : 'development')
 
+require 'nokogiri'
+require "lib/image_helpers"
+helpers ImageHelpers
+
 configure :development do
   activate :livereload
 end
