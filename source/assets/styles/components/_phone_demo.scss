@@ -1,0 +1,26 @@
+.phone-demo {
+  position: relative;
+  width: 317px;
+  height: 645px;
+  background: url('../images/hero-iphone.png');
+  z-index: 2;
+
+  &-container {
+    position: relative;
+  }
+
+  &-screen {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 77px;
+    left: 20px;
+    width: 276px;
+    height: 491px;
+    z-index: 1;
+
+    &.screen1 {
+      background: url('../images/screen1.png') 100% / cover;
+    }
+  }
+}
