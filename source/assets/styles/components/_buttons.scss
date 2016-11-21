@@ -23,7 +23,20 @@ button {
   text-align: center;
   text-decoration: none;
 
+  &.btn-primary {
+    @include colored-button($black, $color-primary, $color-primary);
+    box-shadow: 0 4px shade($color-primary, 20%);
+  }
+
+  &.btn-outline {
+    box-shadow: none;
+  }
+
   &.btn-primary.btn-outline {
     @include colored-button($color-primary, transparent, $color-primary);
+  }
+
+  &.btn-inverse.btn-outline {
+    @include colored-button($white, transparent, $white);
   }
 }

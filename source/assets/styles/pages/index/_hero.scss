@@ -1,0 +1,32 @@
+.index .hero {
+  background: url('../images/hero-bg.jpg')  top center / cover;
+  overflow: hidden;
+
+  > .container {
+    @include display(flex);
+    @include align-items(flex-end);
+    min-height: 800px;
+  }
+
+  .sales-pitch {
+    margin-bottom: 4rem;
+  }
+
+  header {
+    margin: 3rem 0;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    color: $color-primary;
+  }
+
+  .register-link,
+  .download-link {
+    margin: 1.5rem 0;
+  }
+
+  .register-link a {
+    text-transform: uppercase;
+  }
+}

@@ -6,7 +6,24 @@ h1,
 h2,
 h3,
 h4 {
+  margin: 0.4em 0;
   font-family: $font-family-heading;
+  font-weight: normal;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
 }
 
 .link-primary {
