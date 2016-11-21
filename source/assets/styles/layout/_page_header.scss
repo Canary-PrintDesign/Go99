@@ -1,11 +1,16 @@
 .page-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background: $topnav-bg;
   font-size: 14px;
+  z-index: $z-index-topnav;
 
   > .container {
     @include display(flex);
     @include justify-content(space-between);
     @include align-items(center);
+    height: $topnav-height;
   }
 
   .login-links {
