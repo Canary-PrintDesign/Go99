@@ -40,3 +40,53 @@ button {
     @include colored-button($white, transparent, $white);
   }
 }
+
+.btn-split {
+  padding: 0;
+  border: 0;
+
+  .btn-addon,
+  .btn-content {
+    border: 1px solid transparent;
+    display: inline-block;
+    padding: 0.7em;
+  }
+
+  > :first-child {
+    border-radius: 4px 0 0 4px;
+  }
+
+  > :last-child {
+    border-radius: 0 4px 4px 0;
+  }
+
+  &.btn-primary {
+    .btn-addon,
+    .btn-content {
+      border-color: $color-primary;
+    }
+
+    > :nth-child(1) {
+      border-right-color: $black;
+    }
+
+    > :nth-child(n + 2) {
+      border-left-color: transparent;
+    }
+  }
+
+  &.btn-inverse.btn-outline {
+    .btn-addon,
+    .btn-content {
+      border-color: $white;
+    }
+
+    > :nth-child(1) {
+      border-right-color: $white;
+    }
+
+    > :nth-child(n + 2) {
+      border-left-color: transparent;
+    }
+  }
+}
