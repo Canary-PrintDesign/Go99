@@ -1,3 +1,13 @@
 .index .features-section {
   background: url('../images/features-bg.jpg') top center / cover;
+
+  .user-type-toggle {
+    margin: 2.5rem 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  input:not(:checked) + label {
+    color: $color-muted;
+  }
 }

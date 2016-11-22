@@ -1,0 +1,32 @@
+.toggle-select-group {
+  input[type="radio"] {
+    display: none;
+  }
+
+  .toggle-select {
+    display: inline-block;
+    width: 2em;
+    position: relative;
+    top: 0.25em;
+    background: $white;
+    height: 1em;
+    margin: 0 0.5em;
+    border: 1px solid $white;
+    border-radius: 2em;
+
+    &::before {
+      @include size(1em);
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      background: $color-primary;
+      border-radius: 50%;
+    }
+  }
+
+  :checked + label .toggle-select::before {
+    left: auto;
+    right: 0;
+  }
+}
