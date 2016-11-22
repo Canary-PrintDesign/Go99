@@ -8,4 +8,18 @@
       max-height: 0.8em;
     }
   }
+
+  .register-link,
+  .download-link {
+    margin: 1.5rem 0;
+  }
+
+  .register-link a {
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+
+  .download-link a {
+    font-size: 14px;
+  }
 }

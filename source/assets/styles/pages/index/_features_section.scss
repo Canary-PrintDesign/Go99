@@ -1,5 +1,6 @@
 .index .features-section {
   background: url('../images/features-bg.jpg') top center / cover;
+  overflow: hidden;
 
   .user-type-toggle {
     margin: 2.5rem 0;
@@ -9,5 +10,28 @@
 
   input:not(:checked) + label {
     color: $color-muted;
+  }
+
+  .features-container {
+    @include display(flex);
+    box-sizing: border-box;
+    padding: 0 4rem;
+    margin-top: 4rem;
+  }
+
+  .slider-nav,
+  .sales-pitch {
+    margin: 2rem;
+  }
+
+  .sales-pitch {
+    h3 {
+      margin-top: -0.1em; // Vertically align with top of letters
+    }
+  }
+
+  .phone-demo-container {
+    height: 490px;
+    margin: 0 2rem;
   }
 }

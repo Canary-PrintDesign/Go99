@@ -1,0 +1,31 @@
+.slider {
+  &-nav {
+    list-style: none;
+
+    li {
+      @include size(0.8em);
+      display: block;
+      border: 1px solid $white;
+      border-radius: 50%;
+
+      &.active {
+        background: $color-primary;
+      }
+
+      + li {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  .slides {
+    margin-bottom: 3rem;
+  }
+
+  .slide {
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  }
+}

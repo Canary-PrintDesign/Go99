@@ -19,8 +19,10 @@
     height: 491px;
     z-index: 1;
 
-    &.screen1 {
-      background: url('../images/screen1.png') 100% / cover;
+    @for $i from 1 through 2 {
+      &.screen#{$i} {
+        background: url("../images/screen#{$i}.png") 100% / cover;
+      }
     }
   }
 }
