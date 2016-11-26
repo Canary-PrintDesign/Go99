@@ -1,0 +1,14 @@
+.index .cta-section {
+  background: $color-secondary;
+
+  .app-links {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .register-link,
+  .download-link {
+    display: inline-block;
+    margin: 0 1em;
+  }
+}
