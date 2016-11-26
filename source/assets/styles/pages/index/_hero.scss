@@ -5,11 +5,11 @@
   > .container {
     @include display(flex);
     @include align-items(flex-end);
-    min-height: 800px;
+    min-height: 600px;
   }
 
   .phone-demo-container {
-    bottom: -100px;
+    bottom: -200px;
     margin: 0 3rem;
   }
 
