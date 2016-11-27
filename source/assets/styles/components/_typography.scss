@@ -1,5 +1,6 @@
 html {
   font-family: $font-family-body;
+  color: $color-body;
 }
 
 h1,
@@ -30,6 +31,11 @@ h3 {
 
 .link-primary {
   color: $color-primary;
+}
+
+.icon-link {
+  text-decoration: none;
+  display: inline-block;
 }
 
 .hr {
