@@ -1,6 +1,5 @@
 .index .hero {
   background: url('../images/hero-bg.jpg')  top center / cover;
-  overflow: hidden;
 
   > .container {
     @include display(flex);
@@ -9,8 +8,9 @@
   }
 
   .phone-demo-container {
-    bottom: -200px;
+    bottom: -4rem; // hero padding-bottom
     margin: 0 3rem;
+    height: 500px;
   }
 
   .sales-pitch {
