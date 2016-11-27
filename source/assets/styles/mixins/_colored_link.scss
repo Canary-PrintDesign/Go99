@@ -1,0 +1,9 @@
+// Adds color with matching hover color
+//
+// By default, the active state is the inactive state mixed with 20% black.
+@mixin colored-link($color: $color-link, $color-active: shade($color, 35%)) {
+  color: $color;
+  &:hover {
+    color: $color-active;
+  }
+}

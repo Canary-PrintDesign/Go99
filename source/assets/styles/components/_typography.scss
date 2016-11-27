@@ -31,3 +31,9 @@ h3 {
 .link-primary {
   color: $color-primary;
 }
+
+.hr {
+  border-right: 1px solid $color-body;
+  height: 1em;
+  margin: 0 0.5em;
+}
