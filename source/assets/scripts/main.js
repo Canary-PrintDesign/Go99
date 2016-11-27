@@ -9,3 +9,5 @@ if (__DEBUG__) {
 if (__BUILD__) {
   console.log("Welcome to Surefloat.com!");
 }
+
+require('pages/index');
