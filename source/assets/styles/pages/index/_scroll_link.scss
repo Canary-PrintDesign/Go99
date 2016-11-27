@@ -1,0 +1,50 @@
+.scroll-link {
+  @include heading;
+  display: block;
+  position: relative;
+  margin: auto;
+  color: $color-body;
+  text-decoration: none;
+  text-align: center;
+  bottom: -25px;
+  z-index: 1;
+
+  .down-arrow-border {
+    @include shape-diamond($size: 28px, $color: $white);
+  }
+
+  .down-arrow {
+    @include shape-diamond($size: 26px);
+  }
+
+  .down-arrow-border,
+  .down-arrow {
+    @include transform(translateX(-50%));
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
+
+  .down-arrow {
+    @include transform(translate(-50%, 4px));
+  }
+
+  svg {
+    @include transform(translateX(-50%));
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 13px;
+    z-index: 1;
+  }
+
+  &:hover {
+    .cls-1 {
+      fill: $white;
+    }
+  }
+
+  .inverse & {
+    color: $white;
+  }
+}

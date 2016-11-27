@@ -1,0 +1,17 @@
+@mixin shape-diamond($size: 1em, $color: $color-primary) {
+  @include size(0);
+  position: relative;
+  top: -$size;
+  border: $size solid transparent;
+  border-bottom-color: $color;
+
+  &::after {
+    @include size(0);
+    content: '';
+    position: absolute;
+    left: -$size;
+    top: $size;
+    border: $size solid transparent;
+    border-top-color: $color;
+  }
+}
