@@ -3,7 +3,7 @@
   top: 0;
   width: 100%;
   background: $topnav-bg;
-  font-size: 14px;
+  font-size: 13px;
   z-index: $z-index-topnav;
 
   > .container {
@@ -19,7 +19,8 @@
     }
 
     a {
-      letter-spacing: 0.05em;
+      letter-spacing: 0.15em;
+      padding: 13px 15px 13px 15px;
     }
   }
 }
