@@ -1,6 +1,8 @@
 .scroll-link {
   @include heading;
   display: block;
+  font-family: $font-family-body;
+  letter-spacing: .1em;
   position: relative;
   margin: auto;
   color: $color-body;
