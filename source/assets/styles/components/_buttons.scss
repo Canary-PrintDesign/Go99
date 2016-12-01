@@ -18,14 +18,15 @@ button {
   padding: 0.7em;
   display: inline-block;
   border: 1px solid transparent;
-  border-radius: 4px;
-  letter-spacing: 0.05em;
+  border-radius: 5px;
+  font-weight:700;
+  letter-spacing: 0.11em;
   text-align: center;
   text-decoration: none;
 
   &.btn-primary {
     @include colored-button($black, $color-primary, $color-primary);
-    box-shadow: 0 4px shade($color-primary, 20%);
+    box-shadow: 0 6px shade($color-primary, 20%);
   }
 
   &.btn-outline {
@@ -49,15 +50,16 @@ button {
   .btn-content {
     border: 1px solid transparent;
     display: inline-block;
-    padding: 0.7em;
+    font-size: 19px;
+    padding: 16px 19px 12px 19px;
   }
 
   > :first-child {
-    border-radius: 4px 0 0 4px;
+    border-radius: 5px 0 0 5px;
   }
 
   > :last-child {
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 5px 5px 0;
   }
 
   &.btn-primary {
@@ -79,6 +81,9 @@ button {
     .btn-addon,
     .btn-content {
       border-color: $white;
+      font-weight: 500;
+      font-size: 17px;
+      padding: 16px 19px 16px 19px;
     }
 
     > :nth-child(1) {
