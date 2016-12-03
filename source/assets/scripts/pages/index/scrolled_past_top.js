@@ -6,3 +6,4 @@ function toggleScrolledPastTop() {
 }
 
 $(window).on("scroll", throttle(50, toggleScrolledPastTop));
+toggleScrolledPastTop();
