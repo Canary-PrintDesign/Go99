@@ -21,66 +21,13 @@ title: GO99
   <div class="container">
     <h2>Put cash in your jeans with <%= image_tag 'logo-headline.png' %></h2>
     <div class="features">
-      <div class="feature">
-        <%= inline_svg 'icon-nextdaypay.svg' %>
-        <h5>Next Day Pay</h5>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </div>
-      <div class="feature">
-        <%= inline_svg 'icon-controlworkflow.svg' %>
-        <h5>Control Your Workflow</h5>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </div>
-      <div class="feature">
-        <%= inline_svg 'icon-transparency.svg' %>
-        <h5>Transparency</h5>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </div>
-      <div class="feature">
-        <%= inline_svg 'icon-reputation.svg' %>
-        <h5>Manage Your Reputation</h5>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </div>
-      <div class="feature">
-        <%= inline_svg 'icon-nextdaypay.svg' %>
-        <h5>Next Day Pay</h5>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </div>
-      <div class="feature">
-        <%= inline_svg 'icon-controlworkflow.svg' %>
-        <h5>Control Your Workflow</h5>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </div>
-      <div class="feature">
-        <%= inline_svg 'icon-transparency.svg' %>
-        <h5>Transparency</h5>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </div>
-      <div class="feature">
-        <%= inline_svg 'icon-reputation.svg' %>
-        <h5>Manage Your Reputation</h5>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </div>
-      <div class="feature">
-        <%= inline_svg 'icon-nextdaypay.svg' %>
-        <h5>Next Day Pay</h5>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </div>
-      <div class="feature">
-        <%= inline_svg 'icon-controlworkflow.svg' %>
-        <h5>Control Your Workflow</h5>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </div>
-      <div class="feature">
-        <%= inline_svg 'icon-transparency.svg' %>
-        <h5>Transparency</h5>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </div>
-      <div class="feature">
-        <%= inline_svg 'icon-reputation.svg' %>
-        <h5>Manage Your Reputation</h5>
-        <p>Lorem ipsum dolor sit amet consectetur.</p>
-      </div>
+      <%- data[:index][:feature_slides].each do |slide| %>
+        <div class="feature">
+          <%= inline_svg (slide[:icon] || 'icon-nextdaypay.svg') %>
+          <h5><%= slide[:title] %></h5>
+          <p><%= slide[:subtitle] %></p>
+        </div>
+      <%- end %>
     </div>
   </div>
 
