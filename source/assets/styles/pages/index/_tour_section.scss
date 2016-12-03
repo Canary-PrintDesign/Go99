@@ -1,3 +1,5 @@
+$breakpoint-tour-3-slides: 600px;
+
 .index .tour-section {
   .features {
     margin: 4rem 0;
@@ -18,6 +20,12 @@
 
     .cls-1 {
       fill: $color-primary;
+    }
+  }
+
+  @media only screen and (min-width: $breakpoint-tour-3-slides) {
+    .feature {
+      width: 33%;
     }
   }
 }
