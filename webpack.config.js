@@ -50,6 +50,8 @@ var siteConfig = {
         )
       },
 
+      { test: /\.css$/, loaders: ["style", "css"] },
+
       // Embed small pngs as data uri
       // url-loader falls back to file-loader when image is too big
       {
