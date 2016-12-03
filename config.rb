@@ -1,5 +1,6 @@
 ENV['WEBPACK_ENV'] ||= (build? ? 'build' : 'development')
 
+require 'pry'
 require 'nokogiri'
 require "lib/image_helpers"
 helpers ImageHelpers
