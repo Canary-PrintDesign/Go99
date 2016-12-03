@@ -1,8 +1,8 @@
 .page-header {
+  @include transition(color, 500ms);
   position: fixed;
   top: 0;
   width: 100%;
-  background: $topnav-bg;
   font-size: 13px;
   z-index: $z-index-topnav;
 
@@ -22,5 +22,9 @@
       letter-spacing: 0.15em;
       padding: 13px 15px 13px 15px;
     }
+  }
+
+  body.scrolled-past-top & {
+    background: $topnav-bg;
   }
 }
