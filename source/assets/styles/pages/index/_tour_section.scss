@@ -1,13 +1,14 @@
 .index .tour-section {
   .features {
-    @include display(flex);
-    @include justify-content(center);
     margin: 4rem 0;
+
+    .flickity-page-dots {
+      bottom: -50px;
+    }
   }
 
   .feature {
-    @include flex(12em 0 0);
-    margin: 0 1.5rem;
+    width: 50%;
     text-align: center;
 
     p {
