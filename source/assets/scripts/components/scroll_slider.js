@@ -14,7 +14,6 @@ class ScrollSlider {
       let progress = slider.progress(scrollTop);
       let slide = Math.floor(progress * slider.$slides.length);
       slide = Math.min(slide, slider.$slides.length - 1)
-      console.log(slide)
       slider.select(slide);
     }
   }

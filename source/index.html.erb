@@ -36,7 +36,7 @@ title: GO99
 
 <section class="features-section inverse" id="features">
   <div class="sticky-zone">
-    <div class="sticky-slider" data-scroll-trigger-for="drivers">
+    <div class="sticky-slider" data-scroll-trigger-for="features">
       <div class="container">
         <h2>Find out what makes <%= image_tag 'logo-hero.png' %> amazing</h2>
         <div class="toggle-select-group user-type-toggle">
@@ -47,15 +47,24 @@ title: GO99
         </div>
       </div>
       <div class="container features-container">
-        <%- slides = data[:index][:user_slides][:drivers] %>
-        <ul data-scroll-slider-nav-for="drivers"></ul>
+        <%- driver_slides = data[:index][:user_slides][:drivers] %>
+        <%- shipper_slides = data[:index][:user_slides][:shippers] %>
+        <ul data-scroll-slider-nav-for="features"></ul>
         <div class="sales-pitch">
-          <div class="features-slider" data-scroll-slider="drivers">
-            <%- slides.each do |slide| %>
+          <div class="features-slider" data-scroll-slider="features">
+            <%- driver_slides.each_with_index do |driver_slide, i| %>
               <div class="slide">
-                <%= image_tag slide[:image], class: 'slide-image' %>
-                <h5><%= slide[:title] %></h5>
-                <p><%= slide[:subtitle] %></p>
+                <div class="drivers-only">
+                  <%= image_tag driver_slide[:image], class: 'slide-image' %>
+                  <h5><%= driver_slide[:title] %></h5>
+                  <p><%= driver_slide[:subtitle] %></p>
+                </div>
+                <%- shipper_slide = shipper_slides[i] %>
+                <div class="shippers-only">
+                  <%= image_tag shipper_slide[:image], class: 'slide-image' %>
+                  <h5><%= shipper_slide[:title] %></h5>
+                  <p><%= shipper_slide[:subtitle] %></p>
+                </div>
               </div>
             <%- end %>
           </div>
