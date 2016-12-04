@@ -1,6 +1,14 @@
-.slider {
+.scroll-slider {
+  .slide {
+    &:not(.active) {
+      display: none;
+    }
+  }
+
   &-nav {
     list-style: none;
+    padding: 0;
+    margin: 0 4rem;
 
     li {
       @include size(0.8em);
@@ -15,17 +23,6 @@
       + li {
         margin-top: 1em;
       }
-    }
-  }
-
-  .slides {
-    margin-bottom: 3rem;
-  }
-
-  .slide {
-    p {
-      font-size: 14px;
-      line-height: 1.6;
     }
   }
 }
