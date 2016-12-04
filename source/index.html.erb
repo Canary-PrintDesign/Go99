@@ -45,18 +45,19 @@ title: GO99
     </div>
   </div>
   <div class="container features-container">
-    <ul class="slider-nav"><li class="active"></li><li></li><li></li><li></li><li></li></ul>
+    <%- slides = data[:index][:user_slides][:drivers] %>
+    <ul data-scroll-slider-nav-for="drivers"></ul>
     <div class="sales-pitch">
-      <div class="slider features-slider">
-        <div class="slides">
+      <div class="features-slider" data-scroll-slider="drivers">
+        <%- slides.each do |slide| %>
           <div class="slide">
-            <h4>Driver, carrier & shipper profiles</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            <%= image_tag slide[:image], class: 'slide-image' %>
+            <h5><%= slide[:title] %></h5>
+            <p><%= slide[:subtitle] %></p>
           </div>
-        </div>
-
-        <%= partial 'partials/pages/index/app_links' %>
+        <%- end %>
       </div>
+      <%= partial 'partials/pages/index/app_links' %>
     </div>
   </div>
 
