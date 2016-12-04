@@ -1,0 +1,48 @@
+.terms {
+  background-color: #EFEFEF;
+
+  h1 {
+    font-size: 44px;
+    color: #484848;
+  }
+
+  h3 {
+    font-size: 15px;
+    color: #333;
+    font-weight: 700;
+  }
+
+  ol {
+    padding-top: 1em;
+    padding-left: 1em;
+    li {
+      padding: 1em 0 1em 1em;
+    }
+  }
+
+  .terms-menu {
+    padding-top: 8em;
+    width: 220px;
+    float: left;
+    position: fixed;
+    word-wrap:break-word;
+  }
+
+  .terms-content {
+    padding-top: 9em;
+    width: 75%;
+    float: right;
+  }
+
+}
+
+@media screen and (max-width: 1050px) {
+  .terms {
+    .terms-menu, .terms-content {
+      position: inherit;
+      float: left;
+      width: 100%;
+    }
+  }
+}
+
