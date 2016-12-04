@@ -1,39 +1,39 @@
 -
-  icon: icon-nextdaypay.svg
+  icon: tour-nextdaypay.svg
   title: Next Day Pay
   subtitle: For all loads delivered in good order
 
 -
-  icon: icon-transparency.svg
+  icon: tour-transparent.svg
   title: Transparent Pricing
   subtitle: See what shippers pay
 
 -
-  icon: icon-controlworkflow.svg
+  icon: tour-schedule.svg
   title: Schedule Control
   subtitle: Your schedule for pick-ups and deliveries
 
 -
-  icon: icon-nextdaypay.svg
+  icon: tour-payment.svg
   title: Payment Processing
   subtitle: We do all the invoicing and payments
 
 -
-  icon: icon-controlworkflow.svg
+  icon: tour-document.svg
   title: Document Control
   subtitle: Keep all your paperwork in one place
 
 -
-  icon: icon-reputation.svg
+  icon: tour-playingfield.svg
   title: Level Playing Field
   subtitle: No disadvantages to being small or independent
 
 -
-  icon:
-  title: Dispute Management
+  icon: tour-dispute.svg
+  title: Dispute Resolution
   subtitle: Tools to independently track and manage disputes
 
 -
-  icon:
-  title: Keep More Money
-  subtitle: No more middlemen taking profit from both parties (this one should be highlighted in some way)
+  icon: tour-keepmoney.svg
+  title: Cash In Your Jeans
+  subtitle: No more middlemen taking profit from both parties
