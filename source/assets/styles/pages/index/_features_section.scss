@@ -1,5 +1,9 @@
 .index .features-section {
-  background: url('../images/features-bg.jpg') top center / cover;
+  background: url('../images/features-bg.jpg') top center / cover fixed;
+
+  .sticky-zone {
+    height: 2000px;
+  }
 
   .user-type-toggle {
     margin: 2.5rem 0 6rem;

@@ -35,29 +35,33 @@ title: GO99
 </section>
 
 <section class="features-section inverse" id="features">
-  <div class="container">
-    <h2>Find out what makes <%= image_tag 'logo-hero.png' %> amazing</h2>
-    <div class="toggle-select-group user-type-toggle">
-      <input type="radio" name="user-type" value="shipper" id="toggle-shipper">
-      <label for="toggle-shipper">I pay to ship loads</label>
-      <input type="radio" name="user-type" value="driver" id="toggle-driver" checked="">
-      <label for="toggle-driver"><span class="toggle-select"></span> I get paid to ship</label>
-    </div>
-  </div>
-  <div class="container features-container">
-    <%- slides = data[:index][:user_slides][:drivers] %>
-    <ul data-scroll-slider-nav-for="drivers"></ul>
-    <div class="sales-pitch">
-      <div class="features-slider" data-scroll-slider="drivers">
-        <%- slides.each do |slide| %>
-          <div class="slide">
-            <%= image_tag slide[:image], class: 'slide-image' %>
-            <h5><%= slide[:title] %></h5>
-            <p><%= slide[:subtitle] %></p>
-          </div>
-        <%- end %>
+  <div class="sticky-zone">
+    <div class="sticky-slider" data-scroll-trigger-for="drivers">
+      <div class="container">
+        <h2>Find out what makes <%= image_tag 'logo-hero.png' %> amazing</h2>
+        <div class="toggle-select-group user-type-toggle">
+          <input type="radio" name="user-type" value="shipper" id="toggle-shipper">
+          <label for="toggle-shipper">I pay to ship loads</label>
+          <input type="radio" name="user-type" value="driver" id="toggle-driver" checked="">
+          <label for="toggle-driver"><span class="toggle-select"></span> I get paid to ship</label>
+        </div>
       </div>
-      <%= partial 'partials/pages/index/app_links' %>
+      <div class="container features-container">
+        <%- slides = data[:index][:user_slides][:drivers] %>
+        <ul data-scroll-slider-nav-for="drivers"></ul>
+        <div class="sales-pitch">
+          <div class="features-slider" data-scroll-slider="drivers">
+            <%- slides.each do |slide| %>
+              <div class="slide">
+                <%= image_tag slide[:image], class: 'slide-image' %>
+                <h5><%= slide[:title] %></h5>
+                <p><%= slide[:subtitle] %></p>
+              </div>
+            <%- end %>
+          </div>
+          <%= partial 'partials/pages/index/app_links' %>
+        </div>
+      </div>
     </div>
   </div>
 
