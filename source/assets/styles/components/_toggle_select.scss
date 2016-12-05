@@ -1,32 +1,88 @@
+$toggle-height: 26px;
+
 .toggle-select-group {
   input[type="radio"] {
     display: none;
   }
 
-  .toggle-select {
-    display: inline-block;
-    width: 2em;
-    position: relative;
-    top: 0.25em;
-    background: $white;
-    height: 1em;
-    margin: 0 0.5em;
-    border: 1px solid $white;
-    border-radius: 2em;
+  label {
+    cursor: pointer;
+  }
+}
 
-    &::before {
-      @include size(1em);
-      content: '';
-      display: inline-block;
-      position: absolute;
-      left: 0;
-      background: $color-primary;
-      border-radius: 50%;
+.toggle-select {
+  box-sizing: border-box;
+  outline: 0;
+  display: inline-block;
+  width: 2 * $toggle-height;
+  height: $toggle-height;
+  margin: 0 1em;
+  position: relative;
+  top: calc((#{$toggle-height} - 1em) / 2);
+  cursor: pointer;
+  user-select: none;
+
+  &::after,
+  &::before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+  }
+
+  &::selection {
+    background: none;
+  }
+
+  &::after {
+    left: 0;
+  }
+
+  &::before {
+    display: none;
+  }
+
+  &.right::after {
+    left: 50%;
+  }
+}
+
+.toggle-select {
+  @include transition(all .4s ease);
+  background: $color-primary;
+  border-radius: $toggle-height;
+  padding: 2px;
+  border: 1px solid #e8eae9;
+
+  &::after {
+    @include transition(left .3s cubic-bezier(0.175, 0.885, 0.320, 1.275), padding .3s ease, margin .3s ease);
+    border-radius: $toggle-height;
+    background: #fbfbfb;
+    box-shadow:
+      0 0 0 1px rgba(0,0,0,.1),
+      0 4px 0 rgba(0,0,0,.08);
+  }
+
+  &:hover::after {
+    will-change: padding;
+  }
+
+  &:active {
+    box-shadow: inset 0 0 0 $toggle-height #e8eae9;
+
+    &::after {
+      padding-right: $toggle-height / 2;
     }
   }
 
-  :checked + label .toggle-select::before {
-    left: auto;
-    right: 0;
+  &.right {
+    &:active {
+      box-shadow: none;
+
+      &::after {
+        margin-left: -$toggle-height / 2;
+      }
+    }
   }
 }
