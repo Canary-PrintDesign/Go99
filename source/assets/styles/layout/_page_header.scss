@@ -1,5 +1,5 @@
 .page-header {
-  @include transition(color, 500ms);
+  @include transition(color 500ms);
   position: fixed;
   top: 0;
   width: 100%;
@@ -7,10 +7,11 @@
   z-index: $z-index-topnav;
 
   > .container {
+    @include transition(height 500ms);
     @include display(flex);
     @include justify-content(space-between);
     @include align-items(center);
-    height: $topnav-height;
+    height: $topnav-sticky-height;
   }
 
   .login-links {
@@ -24,7 +25,20 @@
     }
   }
 
+  .site-logo svg {
+    @include transition(height, 500ms);
+    height: 43px;
+  }
+
   body.scrolled-past-top & {
     background: $topnav-bg;
+
+    > .container {
+      height: $topnav-height;
+    }
+
+    .site-logo svg {
+      height: 32px;
+    }
   }
 }
