@@ -8,7 +8,8 @@ function checkUserType(e) {
 }
 
 $('.features-section .sticky-slider').stick_in_parent({
-  offset_top: TOPNAV_HEIGHT
+  offset_top: TOPNAV_HEIGHT,
+  spacer: false,
 });
 
 $('[name="user-type"]').on('change', checkUserType)
