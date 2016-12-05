@@ -5,6 +5,12 @@
     height: 2000px;
   }
 
+  .sticky-slider {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
   .user-type-toggle {
     margin: 2.5rem 0 6rem;
     text-align: center;
@@ -51,7 +57,7 @@
   }
 
   .app-links {
-    margin-top: 4rem;
+    margin-top: 12rem;
   }
 
   &.driver .shippers-only,

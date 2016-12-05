@@ -45,15 +45,23 @@ class ScrollSlider {
       .removeClass('active')
       .eq(slideIndex).addClass('active');
     this.$slides
-      .removeClass('active')
-      .eq(slideIndex).addClass('active');
+      .removeClass('below active above')
+      .each(function(i, el) {
+        if ( i < slideIndex ) {
+          $(el).addClass('below');
+        } else if ( i == slideIndex ) {
+          $(el).addClass('active');
+        } else {
+          $(el).addClass('above');
+        }
+      });
   }
 
   progress(scrollTop) {
     let $container = this.$trigger.parent();
     let track = $container.height() - this.$trigger.height();
     let distance = this.$trigger.offset().top - $container.offset().top;
-    return distance / track;
+    return Math.max(0, distance / track);
   }
 }
 

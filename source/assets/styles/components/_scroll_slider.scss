@@ -1,7 +1,27 @@
 .scroll-slider {
+  .slides {
+    position: relative;
+  }
+
   .slide {
+    @include transition(top 300ms, opacity 300ms);
+    position: absolute;
+
     &:not(.active) {
-      display: none;
+      opacity: 0;
+    }
+
+    &.below {
+      top: -50px;
+    }
+
+    &.active {
+      @include transition(opacity 300ms 150ms);
+      top: 0;
+    }
+
+    &.above {
+      top: 50px;
     }
   }
 
