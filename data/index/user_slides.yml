@@ -4,28 +4,28 @@ drivers:
     subtitle: |
       Find more jobs with GO99’s easy to search marketplace.
       Find what you want, where you want, and when you want it!
-    image: video-tour.png
+    image: slides/features-drive-getmore.png
 
   -
     title: Find Your Freedom
     subtitle: |
       Take back control of your Schedule – we respect your time, you should too.
       With GO99 you’re free to pick loads that suit your needs and preferences.
-    image: video-tour.png
+    image: slides/features-drive-findfreedom.png
 
   -
     title: Let Us Be Your Office Support
     subtitle: |
       GO99 can take care of all your invoicing and collections,
       leaving you free to do what you love doing – driving!
-    image: video-tour.png
+    image: slides/features-drive-officesupport.png
 
   -
     title: Control Your Paperwork
     subtitle: |
       No more lost documentation.
       From quotes to bills-of-lading to invoices and receipts – all in one place.
-    image: video-tour.png
+    image: slides/features-drive-paperwork.png
 
 shippers:
   -
@@ -33,21 +33,21 @@ shippers:
     subtitle: |
       GO99 shows you who you are dealing with. You can see your
       Carrier/Driver’s profile, their reputation, skills and documentation.
-    image: video-tour.png
+    image: slides/features-ship-transparency.png
 
   -
     title: Better Communication
     subtitle: |
       Communicate directly with the driver using the GO99 app.
       Get your message across clearly without middlemen muddying the waters.
-    image: video-tour.png
+    image: slides/features-ship-communication.png
 
   -
     title: Market Pricing
     subtitle: |
       All GO99’s quotes come direct from entire carrier market.
       You get competitive lane rates, not just quotes from your pool of Carriers.
-    image: video-tour.png
+    image: slides/features-ship-pricing.png
 
   -
     title: Easy Market Access
@@ -55,4 +55,4 @@ shippers:
       GO99 provides a low barrier to entry and easy load posting.
       With its powerful interface you can sort by price or provider reputation.
       Power and Control is in your hands.
-    image: video-tour.png
+    image: slides/features-ship-easyaccess.png
