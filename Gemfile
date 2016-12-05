@@ -11,7 +11,9 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 # Middleman Gems
 gem 'middleman-livereload'
 gem 'middleman', '>= 4.0.0'
+gem 'middleman-s3_sync'
 
+gem 'mime-types'
 gem 'nokogiri'
 
 group :development do
