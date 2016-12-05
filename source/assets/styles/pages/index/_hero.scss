@@ -1,5 +1,6 @@
 .index .hero {
   background: url('../images/hero-bg.jpg')  top center / cover;
+  background-attachment: fixed;
 
   > .container {
     @include display(flex);
