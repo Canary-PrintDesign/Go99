@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="28" height="22" viewBox="0 0 28 22">
-  <defs>
-    <style>
-      .cls-1 {
-        font-size: 30px;
-        fill: #2d3e50;
-        text-anchor: middle;
-        font-family: FontAwesome;
-        text-transform: uppercase;
-      }
-    </style>
-  </defs>
-  <text id="social-tw.png_social-tw.svg" data-name="social-tw.png, social-tw.svg" class="cls-1" x="14.016" y="22.293"><tspan x="14.016"></tspan></text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 39.4 32"><defs><style>.cls-1{isolation:isolate;}.cls-2{fill:#2d3e50;}</style></defs><title>social-tw</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><g class="cls-1"><path class="cls-2" d="M35.35,8c0,.35,0,.7,0,1.05,0,10.67-8.12,23-23,23A22.82,22.82,0,0,1,0,28.38a16.84,16.84,0,0,0,2,.1A16.17,16.17,0,0,0,12,25a8.09,8.09,0,0,1-7.55-5.6A10.07,10.07,0,0,0,6,19.55a8.53,8.53,0,0,0,2.13-.28A8.08,8.08,0,0,1,1.6,11.35v-.1a8.12,8.12,0,0,0,3.65,1,8.09,8.09,0,0,1-2.5-10.8A23,23,0,0,0,19.4,9.93a9.09,9.09,0,0,1-.2-1.85,8.08,8.08,0,0,1,14-5.52A15.87,15.87,0,0,0,38.3.6,8,8,0,0,1,34.75,5,16.17,16.17,0,0,0,39.4,3.8,17.38,17.38,0,0,1,35.35,8Z"/></g></g></g></svg>
