@@ -1,4 +1,4 @@
-const TOPNAV_HEIGHT = 95; // must match $topnav-height
+const TOPNAV_HEIGHT = 95; // must match $topnav-sticky-height
 require('vendor/jquery.sticky-kit');
 var ScrollSlider = require('components/scroll_slider');
 
