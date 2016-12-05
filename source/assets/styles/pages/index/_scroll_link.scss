@@ -1,5 +1,4 @@
 .scroll-link {
-  @include heading;
   @include transform(translateX(-50%));
   display: block;
   font-family: $font-family-body;
