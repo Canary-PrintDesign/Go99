@@ -4,24 +4,40 @@
   }
 
   .slide {
-    @include transition(top 300ms, opacity 300ms);
     position: absolute;
+    top: 0;
 
-    &:not(.active) {
+    &:not(.active) .text,
+    &:not(.active) img {
       opacity: 0;
     }
 
-    &.below {
+    .text {
+      @include transition(top 300ms, opacity 300ms);
+      position: relative;
+    }
+
+    &.below .text {
       top: -50px;
     }
 
-    &.active {
+    &.active .text {
       @include transition(opacity 300ms 150ms);
       top: 0;
     }
 
-    &.above {
+    &.above .text {
       top: 50px;
+    }
+
+    &:not(.active) img {
+      @include transition(opacity 150ms 300ms);
+      z-index: -1;
+    }
+
+    &.active img {
+      @include transition(opacity 300ms);
+      z-index: 1;
     }
   }
 

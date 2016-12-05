@@ -56,14 +56,18 @@ title: GO99
               <div class="slide">
                 <div class="drivers-only">
                   <%= image_tag driver_slide[:image], class: 'slide-image' %>
-                  <h5><%= driver_slide[:title] %></h5>
-                  <p><%= driver_slide[:subtitle] %></p>
+                  <div class="text">
+                    <h5><%= driver_slide[:title] %></h5>
+                    <p><%= driver_slide[:subtitle] %></p>
+                  </div>
                 </div>
                 <%- shipper_slide = shipper_slides[i] %>
                 <div class="shippers-only">
                   <%= image_tag shipper_slide[:image], class: 'slide-image' %>
-                  <h5><%= shipper_slide[:title] %></h5>
-                  <p><%= shipper_slide[:subtitle] %></p>
+                  <div class="text">
+                    <h5><%= shipper_slide[:title] %></h5>
+                    <p><%= shipper_slide[:subtitle] %></p>
+                  </div>
                 </div>
               </div>
             <%- end %>
