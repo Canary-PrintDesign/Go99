@@ -9,6 +9,13 @@
     position: absolute;
     top: 0;
     width: 100%;
+
+    > .container {
+      @include display(flex);
+      @include flex-direction(column);
+      @include justify-content(center);
+      height: 100vh;
+    }
   }
 
   .user-type-toggle {
@@ -25,7 +32,6 @@
   .features-container {
     @include display(flex);
     box-sizing: border-box;
-    margin-top: 4rem;
   }
 
   .slider-nav {

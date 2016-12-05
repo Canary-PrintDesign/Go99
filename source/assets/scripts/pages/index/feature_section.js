@@ -1,4 +1,3 @@
-const TOPNAV_HEIGHT = 95; // must match $topnav-sticky-height
 require('vendor/jquery.sticky-kit');
 var ScrollSlider = require('components/scroll_slider');
 var $toggleSelect = $('.features-section .toggle-select');
@@ -14,7 +13,6 @@ function toggleSelect() {
 }
 
 $('.features-section .sticky-slider').stick_in_parent({
-  offset_top: TOPNAV_HEIGHT,
   spacer: false,
 });
 

@@ -6,6 +6,7 @@
   .slide {
     position: absolute;
     top: 0;
+    width: 100%;
 
     &:not(.active) .text,
     &:not(.active) img {

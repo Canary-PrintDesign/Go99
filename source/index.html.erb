@@ -46,34 +46,34 @@ title: GO99
           <input type="radio" name="user-type" value="driver" id="toggle-driver" checked="">
           <label for="toggle-driver">I get paid to ship</label>
         </div>
-      </div>
-      <div class="container features-container">
-        <%- driver_slides = data[:index][:user_slides][:drivers] %>
-        <%- shipper_slides = data[:index][:user_slides][:shippers] %>
-        <ul data-scroll-slider-nav-for="features"></ul>
-        <div class="sales-pitch">
-          <div class="features-slider" data-scroll-slider="features">
-            <%- driver_slides.each_with_index do |driver_slide, i| %>
-              <div class="slide">
-                <div class="drivers-only">
-                  <%= image_tag driver_slide[:image], class: 'slide-image' %>
-                  <div class="text">
-                    <h5><%= driver_slide[:title] %></h5>
-                    <p><%= driver_slide[:subtitle] %></p>
+        <div class="features-container">
+          <%- driver_slides = data[:index][:user_slides][:drivers] %>
+          <%- shipper_slides = data[:index][:user_slides][:shippers] %>
+          <ul data-scroll-slider-nav-for="features"></ul>
+          <div class="sales-pitch">
+            <div class="features-slider" data-scroll-slider="features">
+              <%- driver_slides.each_with_index do |driver_slide, i| %>
+                <div class="slide">
+                  <div class="drivers-only">
+                    <%= image_tag driver_slide[:image], class: 'slide-image' %>
+                    <div class="text">
+                      <h5><%= driver_slide[:title] %></h5>
+                      <p><%= driver_slide[:subtitle] %></p>
+                    </div>
+                  </div>
+                  <%- shipper_slide = shipper_slides[i] %>
+                  <div class="shippers-only">
+                    <%= image_tag shipper_slide[:image], class: 'slide-image' %>
+                    <div class="text">
+                      <h5><%= shipper_slide[:title] %></h5>
+                      <p><%= shipper_slide[:subtitle] %></p>
+                    </div>
                   </div>
                 </div>
-                <%- shipper_slide = shipper_slides[i] %>
-                <div class="shippers-only">
-                  <%= image_tag shipper_slide[:image], class: 'slide-image' %>
-                  <div class="text">
-                    <h5><%= shipper_slide[:title] %></h5>
-                    <p><%= shipper_slide[:subtitle] %></p>
-                  </div>
-                </div>
-              </div>
-            <%- end %>
+              <%- end %>
+            </div>
+            <%= partial 'partials/pages/index/app_links' %>
           </div>
-          <%= partial 'partials/pages/index/app_links' %>
         </div>
       </div>
     </div>
