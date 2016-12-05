@@ -1,8 +1,12 @@
 .index .features-section {
-  background: url('../images/features-bg.jpg') top center / cover;
+  background: url('../images/features-bg.jpg') top center / cover fixed;
+
+  .sticky-zone {
+    height: 2000px;
+  }
 
   .user-type-toggle {
-    margin: 2.5rem 0;
+    margin: 2.5rem 0 6rem;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -15,16 +19,15 @@
   .features-container {
     @include display(flex);
     box-sizing: border-box;
-    padding: 0 4rem;
     margin-top: 4rem;
   }
 
-  .slider-nav,
-  .sales-pitch {
+  .slider-nav {
     margin: 2rem;
   }
 
   .sales-pitch {
+    @include flex-grow(1);
     h3 {
       margin-top: -0.1em; // Vertically align with top of letters
     }
@@ -32,6 +35,27 @@
 
   .phone-demo-container {
     height: 390px;
-    margin: 0 2rem;
+    float: right;
+  }
+
+  .slide {
+    h5 {
+      margin-top: 0;
+    }
+
+    &-image {
+      float: right;
+      width: 60%;
+      margin-left: 2rem;
+    }
+  }
+
+  .app-links {
+    margin-top: 4rem;
+  }
+
+  &.driver .shippers-only,
+  &.shipper .drivers-only {
+    display: none;
   }
 }

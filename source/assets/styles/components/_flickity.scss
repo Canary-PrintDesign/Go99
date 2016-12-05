@@ -1,0 +1,19 @@
+.flickity-prev-next-button {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    color: $color-body;
+    font-weight: normal;
+
+    @at-root .previous#{&} {
+      content: 'prev';
+    }
+
+    @at-root .next#{&} {
+      content: 'next';
+    }
+  }
+}

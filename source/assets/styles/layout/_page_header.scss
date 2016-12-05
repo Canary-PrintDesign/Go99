@@ -1,16 +1,17 @@
 .page-header {
+  @include transition(color 500ms);
   position: fixed;
   top: 0;
   width: 100%;
-  background: $topnav-bg;
-  font-size: 14px;
+  font-size: 13px;
   z-index: $z-index-topnav;
 
   > .container {
+    @include transition(height 500ms);
     @include display(flex);
     @include justify-content(space-between);
     @include align-items(center);
-    height: $topnav-height;
+    height: $topnav-sticky-height;
   }
 
   .login-links {
@@ -19,7 +20,25 @@
     }
 
     a {
-      letter-spacing: 0.05em;
+      letter-spacing: 0.15em;
+      padding: 13px 15px 13px 15px;
+    }
+  }
+
+  .site-logo svg {
+    @include transition(height, 500ms);
+    height: 43px;
+  }
+
+  body.scrolled-past-top & {
+    background: $topnav-bg;
+
+    > .container {
+      height: $topnav-height;
+    }
+
+    .site-logo svg {
+      height: 32px;
     }
   }
 }

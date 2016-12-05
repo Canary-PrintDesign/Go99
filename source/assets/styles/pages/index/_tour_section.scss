@@ -1,13 +1,29 @@
+$breakpoint-tour-3-slides: 600px;
+$breakpoint-tour-4-slides: 800px;
+
 .index .tour-section {
   .features {
-    @include display(flex);
-    @include justify-content(center);
     margin: 4rem 0;
+
+    .flickity-page-dots {
+      bottom: -50px;
+    }
+
+    .flickity-prev-next-button {
+      top: 60%;
+
+      &.previous {
+        left: -4rem;
+      }
+
+      &.next {
+        right: -4rem;
+      }
+    }
   }
 
   .feature {
-    @include flex(12em 0 0);
-    margin: 0 1.5rem;
+    width: 50%;
     text-align: center;
 
     p {
@@ -17,6 +33,22 @@
 
     .cls-1 {
       fill: $color-primary;
+    }
+  }
+
+  @media only screen and (min-width: $breakpoint-tour-3-slides) {
+    .feature {
+      width: 33%;
+    }
+  }
+
+  @media only screen and (min-width: $breakpoint-tour-4-slides) {
+    .features {
+      @include margin(null 6rem); // Room for PREV NEXT buttons
+    }
+
+    .feature {
+      width: 25%;
     }
   }
 }

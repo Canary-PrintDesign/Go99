@@ -1,14 +1,17 @@
 .scroll-link {
   @include heading;
+  @include transform(translateX(-50%));
   display: block;
   font-family: $font-family-body;
   letter-spacing: .1em;
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
   position: relative;
   margin: auto;
   color: $color-body;
   text-decoration: none;
   text-align: center;
-  bottom: -25px;
   z-index: 1;
 
   .down-arrow-border {
@@ -19,12 +22,13 @@
     @include shape-diamond($size: 26px);
   }
 
+  .label,
   .down-arrow-border,
   .down-arrow {
     @include transform(translateX(-50%));
     position: absolute;
-    top: 0;
     left: 50%;
+    top: 1px;
   }
 
   .down-arrow {

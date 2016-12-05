@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var Clean = require('clean-webpack-plugin');
+// var Clean = require('clean-webpack-plugin');
 var WebpackNotifier = require('webpack-notifier');
 
 var definePlugin = new webpack.DefinePlugin({
@@ -50,6 +50,8 @@ var siteConfig = {
         )
       },
 
+      { test: /\.css$/, loaders: ["style", "css"] },
+
       // Embed small pngs as data uri
       // url-loader falls back to file-loader when image is too big
       {
@@ -69,7 +71,7 @@ var siteConfig = {
 
   plugins: [
     definePlugin,
-    new Clean(['.tmp']),
+    // new Clean(['.tmp']),
     new ExtractTextPlugin("assets/styles/main.bundle.css"),
     new webpack.optimize.CommonsChunkPlugin("main", "assets/scripts/main.bundle.js"),
     new webpack.ProvidePlugin({

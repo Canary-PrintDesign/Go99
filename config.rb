@@ -1,5 +1,6 @@
 ENV['WEBPACK_ENV'] ||= (build? ? 'build' : 'development')
 
+require 'pry'
 require 'nokogiri'
 require "lib/image_helpers"
 helpers ImageHelpers
@@ -19,3 +20,5 @@ activate :external_pipeline,
 set :css_dir,    'assets/styles'
 set :js_dir,     'assets/scripts'
 set :images_dir, 'assets/images'
+
+activate :directory_indexes
