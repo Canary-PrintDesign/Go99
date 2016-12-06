@@ -3,6 +3,10 @@
     padding: .5em 0 1em 0;
   }
 
+  .remodal-close:hover {
+    background: none;
+  }
+
   .form-name {
     width: 45%;
     float: left;
