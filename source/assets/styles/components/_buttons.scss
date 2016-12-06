@@ -1,5 +1,5 @@
 // Adds a matching background and border-color
-@mixin colored-button($color: $white, $color-bg: $black, $color-border: $white, $color-active: shade($color, 20%), $color-bg-active: shade($color-bg, 20%), $color-border-active: shade($color-border, 20%)) {
+@mixin colored-button($color: $white, $color-bg: $black, $color-border: $white, $color-active: shade($color, 20%), $color-bg-active: shade($color-bg, 20%), $color-bg-primary-active: tint($color-bg, 20%), $color-border-active: shade($color-border, 20%), $color-border-primary-active: shade($color-border, 20%)) {
   color: $color;
   background: $color-bg;
   border-color: $color-border;
@@ -8,6 +8,19 @@
     color: $color;
     background: $color-bg-active;
     border-color: $color-border-active;
+  }
+
+  div.page-header &:hover {
+    color: $color;
+    background: $color-bg-active;
+    border-color: $color-border-active;
+  }
+
+  &.btn-primary:hover {
+    color: $color;
+    background: $color-bg-primary-active;
+    border-color: $color-border-primary-active;
+
   }
 }
 
