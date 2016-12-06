@@ -7,7 +7,8 @@ if (__DEBUG__) {
 }
 
 if (__BUILD__) {
-  console.log("Welcome to Surefloat.com!");
+  console.log("Welcome to Go99!");
 }
 
 require('pages/index');
+require('vendor/remodal.min.js');

@@ -1,0 +1,25 @@
+<div class="remodal" data-remodal-id="contact-form">
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <h2>Drop Us a Line</h2>
+
+  <form id="ajax-contact" method="post" action="https://static-files.canaryprint.ca/DOMAIN/mailer.php">
+    <div class="field form-name">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="field form-email">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="clearfix"></div>
+    <div class="field form-message">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
+
+    <div class="field">
+      <button type="submit">SEND</button>
+    </div>
+  </form>
+</div>
