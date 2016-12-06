@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33">
+  <title>icon-closewindow</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <circle fill="#08232f" cx="16.5" cy="16.5" r="16"/>
+      <path fill="#fff" d="M16.5,33A16.5,16.5,0,1,1,33,16.5,16.52,16.52,0,0,1,16.5,33Zm0-32A15.5,15.5,0,1,0,32,16.5,15.52,15.52,0,0,0,16.5,1Z"/>
+      <path fill="#fff" d="M11,10.1l-.86.86,5.62,5.57-5.54,5.57.79.8,5.54-5.57L22,22.91l.79-.8-5.54-5.57L22.91,11,22,10.1,16.5,15.74Z"/>
+    </g>
+  </g>
+</svg>
