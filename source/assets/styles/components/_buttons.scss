@@ -1,5 +1,5 @@
 // Adds a matching background and border-color
-@mixin colored-button($color: $white, $color-bg: $black, $color-border: $white, $color-active: shade($color, 20%), $color-bg-active: shade($color-bg, 20%), $color-bg-primary-active: tint($color-bg, 20%), $color-border-active: shade($color-border, 20%), $color-border-primary-active: shade($color-border, 20%)) {
+@mixin colored-button($color: $white, $color-bg: $black, $color-border: $white, $color-active: shade($color, 20%), $color-bg-active: shade($color-bg, 40%), $color-bg-primary-active: tint($color-bg, 20%), $color-border-active: shade($color-border, 20%), $color-border-primary-active: tint($color-border, 20%)) {
   color: $color;
   background: $color-bg;
   border-color: $color-border;
@@ -44,6 +44,7 @@ button {
 
   &.btn-outline {
     box-shadow: none;
+    border: 1px solid $white;
   }
 
   &.btn-primary.btn-outline {
@@ -64,11 +65,16 @@ button {
     border: 1px solid transparent;
     display: inline-block;
     font-size: 19px;
-    padding: 16px 19px 12px 19px;
+    padding: .6rem .8rem .4rem .8rem;
+    vertical-align: middle;
+  }
+  &.btn-primary .btn-content {
+    border: 0;
   }
 
   > :first-child {
     border-radius: 5px 0 0 5px;
+    border: 1px solid transparent;
   }
 
   > :last-child {
@@ -82,7 +88,7 @@ button {
     }
 
     > :nth-child(1) {
-      border-right-color: $black;
+      border-right-color: shade($color-primary, 20%);
     }
 
     > :nth-child(n + 2) {
@@ -93,14 +99,14 @@ button {
   &.btn-inverse.btn-outline {
     .btn-addon,
     .btn-content {
-      border-color: $white;
+      border: 0;
       font-weight: 500;
       font-size: 17px;
-      padding: 16px 19px 16px 19px;
+      padding: .6rem .8rem .4rem .8rem;
     }
 
     > :nth-child(1) {
-      border-right-color: $white;
+      border-right: 1px solid $white;
     }
 
     > :nth-child(n + 2) {
