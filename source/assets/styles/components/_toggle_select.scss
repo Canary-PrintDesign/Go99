@@ -50,7 +50,7 @@ $toggle-height: 26px;
 
 .toggle-select {
   @include transition(all .4s ease);
-  background: $color-primary;
+  background: $white;
   border-radius: $toggle-height;
   padding: 2px;
   border: 1px solid #e8eae9;
@@ -58,10 +58,7 @@ $toggle-height: 26px;
   &::after {
     @include transition(left .3s cubic-bezier(0.175, 0.885, 0.320, 1.275), padding .3s ease, margin .3s ease);
     border-radius: $toggle-height;
-    background: #fbfbfb;
-    box-shadow:
-      0 0 0 1px rgba(0,0,0,.1),
-      0 4px 0 rgba(0,0,0,.08);
+    background: $color-primary;
   }
 
   &:hover::after {
