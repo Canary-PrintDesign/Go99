@@ -34,7 +34,7 @@ class ScrollSlider {
   createNav() {
     this.$nav.addClass('scroll-slider-nav');
     this.$slides.each( (i) => {
-      $('<li/>').appendTo(this.$nav);
+      $('<li><a href="#">').appendTo(this.$nav);
     });
   }
 

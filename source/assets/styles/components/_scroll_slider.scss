@@ -48,18 +48,20 @@
     margin: 0 4rem;
 
     li {
+      + li {
+        margin-top: 1em;
+      }
+
+      &.active a {
+        background: $color-primary;
+      }
+    }
+
+    a {
       @include size(0.8em);
       display: block;
       border: 1px solid $white;
       border-radius: 50%;
-
-      &.active {
-        background: $color-primary;
-      }
-
-      + li {
-        margin-top: 1em;
-      }
     }
   }
 }
