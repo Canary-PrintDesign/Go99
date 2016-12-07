@@ -2,8 +2,12 @@ $breakpoint-tour-3-slides: 600px;
 $breakpoint-tour-4-slides: 800px;
 
 .index .tour-section {
+  .container {
+    padding: 3rem 0;
+  }
+
   .features {
-    margin: 4rem 0;
+    margin: 4rem 0 2rem 0;
     fill: #f6c636;
 
     .flickity-page-dots {

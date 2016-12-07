@@ -1,6 +1,10 @@
 .index .cta-section {
   background: $color-secondary;
 
+  .container {
+    padding: 3rem 0;
+  }
+
   .app-links {
     margin-top: 3rem;
     text-align: center;
