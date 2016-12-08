@@ -32,6 +32,11 @@
     .scroll-link {
       display: none;
     }
+
+    .app-links {
+      @include transform(scale(0.9));
+      @include transform-origin(top left);
+    }
   }
 
   @media (min-width: $screen-lg-min) {
