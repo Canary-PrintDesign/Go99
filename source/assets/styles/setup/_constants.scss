@@ -21,3 +21,20 @@ $font-family-heading: 'Oswald', sans-serif;
 $page-width:          1170px;
 
 $z-index-topnav:      100;
+
+$screen-sm-max: 649px;
+$screen-md-min: ($screen-sm-max + 1);
+$screen-md-max: 959px;
+$screen-lg-min: ($screen-md-max + 1);
+
+.tablet-and-below {
+  @media (min-width: $screen-lg-min) {
+    display: none !important;
+  }
+}
+
+.desktop-only {
+  @media (max-width: $screen-md-max) {
+    display: none !important;
+  }
+}

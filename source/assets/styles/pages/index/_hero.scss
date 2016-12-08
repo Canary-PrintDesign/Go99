@@ -14,7 +14,7 @@
     color: $color-primary;
   }
 
-  @media only screen and (max-width: 959px) {
+  @media (max-width: $screen-md-max) {
     > .container {
       @include flex-direction(column);
       @include align-items(center);
@@ -34,7 +34,7 @@
     }
   }
 
-  @media only screen and (min-width: 960px) {
+  @media (min-width: $screen-lg-min) {
     > .container {
       @include align-items(flex-end);
     }
