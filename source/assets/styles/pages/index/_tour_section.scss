@@ -44,6 +44,10 @@ $breakpoint-tour-4-slides: 800px;
     .cls-1 {
       fill: $color-primary;
     }
+
+    @media (max-width: $screen-md-max) {
+      @include transform(scale(0.9));
+    }
   }
 
   @media only screen and (min-width: $breakpoint-tour-3-slides) {
