@@ -1,6 +1,6 @@
 .page-header {
   @include transition(color 500ms);
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   font-size: 13px;
@@ -30,15 +30,18 @@
     height: 43px;
   }
 
-  body.scrolled-past-top & {
-    background: $topnav-bg;
+  @media only screen and (min-width: 640px) {
+    body.scrolled-past-top & {
+      position: fixed;
+      background: $topnav-bg;
 
-    > .container {
-      height: $topnav-height;
-    }
+      > .container {
+        height: $topnav-height;
+      }
 
-    .site-logo svg {
-      height: 32px;
+      .site-logo svg {
+        height: 32px;
+      }
     }
   }
 }
