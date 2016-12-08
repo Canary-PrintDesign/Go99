@@ -2,7 +2,7 @@
   text-align: center;
 
   p {
-    margin: 3rem auto;
+    margin: 2rem auto;
   }
 
   .social-links,
@@ -11,12 +11,13 @@
     @include display(flex);
     @include justify-content(center);
     @include align-items(center);
+    @include flex-wrap(wrap);
   }
 
   .social-links {
     a {
       @include size(3rem);
-      margin: 0 1rem;
+      margin: 1rem;
       border-radius: 50%;
       background: $color-primary;
     }
