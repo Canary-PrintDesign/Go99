@@ -68,6 +68,10 @@ h5 {
   margin: 0 0.5em;
 }
 
+br.mbl-break {
+    display: none;
+}
+
 @media (max-width: $screen-md-max) {
   h1 {
     font-size: 8vw;
@@ -85,5 +89,9 @@ h5 {
   h4,
   h5 {
     font-size: 5vw;
+  }
+  
+  br.mbl-break {
+      display: block;
   }
 }
