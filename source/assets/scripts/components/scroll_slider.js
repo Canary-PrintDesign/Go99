@@ -11,10 +11,7 @@ class ScrollSlider {
   static checkScroll() {
     var scrollTop = $(window).scrollTop();
     for (var slider of sliders) {
-      let progress = slider.progress(scrollTop);
-      let slide = Math.floor(progress * slider.$slides.length);
-      slide = Math.min(slide, slider.$slides.length - 1)
-      slider.select(slide);
+      slider.checkScroll(scrollTop);
     }
   }
 
@@ -36,6 +33,7 @@ class ScrollSlider {
     this.$slides.each( (i) => {
       $('<li><a href="#">').appendTo(this.$nav);
     });
+    this.$nav.on('click', 'a', this.onClickNav.bind(this));
   }
 
   select(slideIndex) {
@@ -63,10 +61,35 @@ class ScrollSlider {
     let distance = this.$trigger.offset().top - $container.offset().top;
     return Math.max(0, distance / track);
   }
+
+  goto(index) {
+    let $container = this.$trigger.parent();
+    let track = $container.height() - this.$trigger.height();
+    let step = track / this.$slides.length
+    let scrollTop = $container.offset().top + (index + 0.5) * step;
+    $('body').scrollTop(scrollTop);
+    return scrollTop;
+  }
+
+  onClickNav(e) {
+    e.preventDefault();
+    let index = $(e.target).closest('li').index();
+    this.disableChecks = true;
+    let scrollTop = this.goto(index);
+    this.disableChecks = false;
+    this.checkScroll(scrollTop);
+  }
+
+  checkScroll(scrollTop) {
+    if (this.disableChecks) return;
+    let progress = this.progress(scrollTop);
+    let slide = Math.floor(progress * this.$slides.length);
+    slide = Math.min(slide, this.$slides.length - 1)
+    this.select(slide);
+  }
 }
 
 ScrollSlider.init();
 $(window).on("scroll", throttle(50, ScrollSlider.checkScroll));
-
 
 module.exports = ScrollSlider;
