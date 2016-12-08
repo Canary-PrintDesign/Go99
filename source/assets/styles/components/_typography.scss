@@ -29,6 +29,11 @@ h1 {
 
 h2 {
   font-size: 36px;
+
+  // inline logos
+  svg {
+    margin-top: 0.3em;
+  }
 }
 
 h3 {
@@ -61,4 +66,24 @@ h5 {
   border-right: 1px solid $color-body;
   height: 1em;
   margin: 0 0.5em;
+}
+
+@media (max-width: $screen-md-max) {
+  h1 {
+    font-size: 8vw;
+  }
+
+  h2 {
+    font-size: 6vw;
+
+    svg {
+      height: 5vw;
+    }
+  }
+
+  h3,
+  h4,
+  h5 {
+    font-size: 5vw;
+  }
 }
