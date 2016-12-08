@@ -1,6 +1,8 @@
+$padding-homepage-section: 4rem;
+
 .index section {
   position: relative;
-  padding: 4rem 0;
+  padding: $padding-homepage-section 0;
 
   h2 {
     text-align: center;

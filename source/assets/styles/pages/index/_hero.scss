@@ -14,10 +14,6 @@
     color: $color-primary;
   }
 
-  .phone-demo-container {
-    bottom: -4rem; // hero padding-bottom
-  }
-
   @media only screen and (max-width: 959px) {
     > .container {
       @include flex-direction(column);
@@ -26,7 +22,7 @@
 
     .phone-demo-container {
       @include order(1);
-      height: 120px;
+      margin-top: 2rem;
     }
 
     .sales-pitch {
@@ -49,7 +45,7 @@
     }
 
     .phone-demo-container {
-      margin: 5rem 3rem 0;
+      margin: 5rem 3rem #{-$padding-homepage-section};
       height: 565px;
     }
   }
