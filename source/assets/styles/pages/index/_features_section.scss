@@ -73,4 +73,27 @@
   &.shipper .drivers-only {
     display: none;
   }
+
+  @media (max-width: 499px) {
+    .user-type-toggle {
+      @include display(flex);
+      @include justify-content(center);
+
+      label {
+        &:first-of-type {
+          text-align: right;
+        }
+
+        &:last-of-type {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 500px) {
+    br.tiny-break {
+      display: none;
+    }
+  }
 }
