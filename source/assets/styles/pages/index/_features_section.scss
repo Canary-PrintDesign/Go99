@@ -96,4 +96,16 @@
       display: none;
     }
   }
+
+  @media (max-width: $screen-md-max) {
+    .features-slider {
+      img {
+        display: none;
+      }
+    }
+
+    .app-links {
+      display: none;
+    }
+  }
 }
