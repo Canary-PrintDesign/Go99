@@ -64,7 +64,9 @@
   }
 
   .app-links {
+    position: relative;
     margin-top: 12rem;
+    z-index: 1;
   }
 
   &.driver .shippers-only,
