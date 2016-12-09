@@ -19,6 +19,7 @@
 
   .down-arrow {
     @include shape-diamond($size: 26px);
+    height: auto !important;
   }
 
   .label,
