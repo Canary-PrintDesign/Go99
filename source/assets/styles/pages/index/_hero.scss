@@ -57,6 +57,7 @@
   @media (min-width: $screen-lg-min) {
     > .container {
       @include align-items(flex-end);
+      margin-top:3.5rem;
     }
 
     .sales-pitch {
