@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 .container {
   max-width: $page-width;
   margin: auto;
