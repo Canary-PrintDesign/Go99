@@ -1,5 +1,6 @@
 .index .features-section {
   background: url('../images/features-bg.jpg') top center / cover fixed;
+  z-index: 1;
 
   .sticky-zone {
     height: 2000px;
