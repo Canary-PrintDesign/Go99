@@ -39,6 +39,19 @@
     }
   }
 
+  @media (max-width: 400px) {
+    .phone-demo-container {
+      @include transform(scale(0.9));
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 325px) {
+    .phone-demo-container {
+      @include transform(scale(0.8));
+    }
+  }
+
   @media (min-width: $screen-lg-min) {
     > .container {
       @include align-items(flex-end);
