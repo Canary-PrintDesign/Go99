@@ -1,7 +1,6 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 // var Clean = require('clean-webpack-plugin');
-var WebpackNotifier = require('webpack-notifier');
 
 var definePlugin = new webpack.DefinePlugin({
   __DEVELOPMENT__: JSON.stringify(JSON.parse(process.env.WEBPACK_ENV === 'development')),
@@ -79,7 +78,6 @@ var siteConfig = {
       jQuery: "jquery",
       "window.jQuery": "jquery"
     }),
-    new WebpackNotifier,
   ],
 };
 
