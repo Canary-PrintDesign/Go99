@@ -5,7 +5,7 @@
   display: block;
   position: absolute;
   left: 50%;
-  bottom: -6px;
+  bottom: -7px;
   position: relative;
   margin: auto;
   color: $color-body;
@@ -13,17 +13,12 @@
   text-align: center;
   z-index: 2;
 
-  .down-arrow-border {
-    @include shape-diamond($size: 28px, $color: $white);
-  }
-
   .down-arrow {
     @include shape-diamond($size: 26px);
     height: auto !important;
   }
 
   .label,
-  .down-arrow-border,
   .down-arrow {
     @include transform(translateX(-50%));
     position: absolute;
