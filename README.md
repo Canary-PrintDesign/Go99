@@ -1,4 +1,4 @@
-# GO99 Website
+# Go99 Website
 
 ## Getting Started
 
