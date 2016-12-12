@@ -51,7 +51,9 @@ title: Go99
           <%- shipper_slides = data[:index][:user_slides][:shippers] %>
           <ul data-scroll-slider-nav-for="features"></ul>
           <div class="sales-pitch">
-            <div class="features-slider" data-scroll-slider="features">
+            <div class="features-slider"
+                 data-flickity='{ "wrapAround": true, "prevNextButtons": false, "watchCSS": true }'
+                 data-scroll-slider='{ "name": "features", "watchCSS": true }'>
               <%- driver_slides.each_with_index do |driver_slide, i| %>
                 <div class="slide">
                   <div class="drivers-only">

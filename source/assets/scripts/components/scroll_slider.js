@@ -16,16 +16,35 @@ class ScrollSlider {
   }
 
   constructor(el) {
-    sliders.push(this);
-    this.$el = $(el).addClass('scroll-slider');
+    this.$el = $(el);
+    this.options = this.$el.data('scroll-slider') || {};
+    if ( this.options.watchCSS ) {
+      this.watchCSS();
+    } else {
+      this.activate();
+    }
+  }
+
+  activate() {
     this.$el.data('slider-instance', this);
-    this.name = this.$el.data('scroll-slider');
+    this.name = this.options.name || `scroll-slider-${sliders.length}`;
+    sliders.push(this);
+    this.$el.addClass('scroll-slider');
     this.$nav = $(`[data-scroll-slider-nav-for="${this.name}"]`);
     this.$trigger = $(`[data-scroll-trigger-for="${this.name}"]`);
     this.$slides = this.$el.children();
     this.$slides.wrapAll('<div class="slides">');
     this.createNav();
     this.select(0);
+  }
+
+  // watches the :after property
+  // activate if :after { content: 'scroll-slider' }
+  watchCSS() {
+    var afterContent = getComputedStyle(this.$el[0], ':after').content;
+    if ( afterContent.indexOf('scroll-slider') != -1 ) {
+      this.activate();
+    }
   }
 
   createNav() {
@@ -74,9 +93,9 @@ class ScrollSlider {
   onClickNav(e) {
     e.preventDefault();
     let index = $(e.target).closest('li').index();
-    this.disableChecks = true;
+    this.disable();
     let scrollTop = this.goto(index);
-    this.disableChecks = false;
+    this.enable();
     this.checkScroll(scrollTop);
   }
 
@@ -86,6 +105,14 @@ class ScrollSlider {
     let slide = Math.floor(progress * this.$slides.length);
     slide = Math.min(slide, this.$slides.length - 1)
     this.select(slide);
+  }
+
+  disable() {
+    this.disableChecks = true;
+  }
+
+  enable() {
+    this.disableChecks = true;
   }
 }
 

@@ -2,23 +2,6 @@
   background: url('../images/features-bg.jpg') top center / cover fixed;
   z-index: 1;
 
-  .sticky-zone {
-    height: 2000px;
-  }
-
-  .sticky-slider {
-    position: absolute;
-    top: 0;
-    width: 100%;
-
-    > .container {
-      @include display(flex);
-      @include flex-direction(column);
-      @include justify-content(center);
-      height: 100vh;
-    }
-  }
-
   .user-type-toggle {
     margin: 1.5rem 0 6rem;
     text-align: center;
@@ -28,15 +11,6 @@
 
   input:not(:checked) + label {
     color: $color-muted;
-  }
-
-  .features-container {
-    @include display(flex);
-    box-sizing: border-box;
-  }
-
-  .slider-nav {
-    margin: 2rem;
   }
 
   .sales-pitch {
@@ -52,6 +26,8 @@
   }
 
   .slide {
+    width: 100%;
+
     h5 {
       margin-top: 0;
     }
@@ -100,13 +76,70 @@
 
   @media (max-width: $screen-md-max) {
     .features-slider {
+      // enable flickity for small screens
+      &:after {
+        display: none;
+        content: 'flickity';
+      }
+
       img {
         display: none;
       }
     }
 
+    .flickity-page-dots {
+      position: relative;
+      bottom: auto;
+      margin: 1rem auto 3rem;
+
+      .dot {
+        @include size(0.8em);
+        border: 1px solid $white;
+
+        &.is-selected {
+          background: $color-primary;
+        }
+      }
+    }
+
     .app-links {
       display: none;
+    }
+  }
+
+  @media (min-width: $screen-lg-min) {
+    .sticky-zone {
+      height: 2000px;
+    }
+
+    .features-slider {
+      // enable scroll slider for large screens
+      &:after {
+        display: none;
+        content: 'scroll-slider';
+      }
+    }
+
+    .sticky-slider {
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      > .container {
+        @include display(flex);
+        @include flex-direction(column);
+        @include justify-content(center);
+        height: 100vh;
+      }
+    }
+
+    .features-container {
+      @include display(flex);
+      box-sizing: border-box;
+    }
+
+    .slider-nav {
+      margin: 2rem;
     }
   }
 }
