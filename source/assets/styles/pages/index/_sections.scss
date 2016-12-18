@@ -7,8 +7,11 @@ $padding-homepage-section: 4rem;
   h2 {
     text-align: center;
 
-    img {
+    img,
+    svg {
+      display: inline-block;
       max-height: 0.8em;
+      max-width: 4em;
     }
   }
 
