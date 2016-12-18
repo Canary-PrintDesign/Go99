@@ -20,6 +20,11 @@
     color: $color-primary;
   }
 
+  .phone-demo-container {
+    margin: 5rem 3rem #{-$padding-homepage-section};
+    height: 520px;
+  }
+
   @media (max-width: $screen-md-max) {
     > .container {
       @include flex-direction(column);
@@ -69,11 +74,6 @@
       margin-top: 5rem;
       margin-bottom: 4rem;
       margin-left: 3rem;
-    }
-
-    .phone-demo-container {
-      margin: 5rem 3rem #{-$padding-homepage-section};
-      height: 565px;
     }
   }
 }
