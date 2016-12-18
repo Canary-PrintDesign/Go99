@@ -11,6 +11,11 @@
     margin-top: 3rem;
   }
 
+  h1,
+  h3 {
+    text-shadow: 0 2px 0 $color-body;
+  }
+
   h1 {
     color: $color-primary;
   }
