@@ -54,7 +54,9 @@ h5 {
 }
 
 .link-primary {
+  text-decoration: none;
   color: $color-primary;
+  border-bottom: 1px solid $color-primary;
 }
 
 .icon-link {
