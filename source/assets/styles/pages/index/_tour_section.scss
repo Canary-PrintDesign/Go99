@@ -15,19 +15,10 @@ $breakpoint-tour-4-slides: 800px;
     }
 
     .flickity-prev-next-button {
-      top: 60%;
       opacity: .5;
 
       &:hover {
         opacity: 1;
-      }
-
-      &.previous {
-        left: -4rem;
-      }
-
-      &.next {
-        right: -4rem;
       }
     }
   }
@@ -56,9 +47,41 @@ $breakpoint-tour-4-slides: 800px;
     }
   }
 
+  @media only screen and (max-width: #{$breakpoint-tour-4-slides - 1}) {
+    .features {
+      .flickity-prev-next-button {
+        @include transform(scale(0.75));
+        top: auto;
+        bottom: -88px;
+
+        &.previous {
+          left: auto;
+          right: calc(50% + 4rem);
+        }
+
+        &.next {
+          right: auto;
+          left: calc(50% + 4rem);
+        }
+      }
+    }
+  }
+
   @media only screen and (min-width: $breakpoint-tour-4-slides) {
     .features {
       @include margin(null 6rem); // Room for PREV NEXT buttons
+
+      .flickity-prev-next-button {
+        top: 60%;
+
+        &.previous {
+          left: -4rem;
+        }
+
+        &.next {
+          right: -4rem;
+        }
+      }
     }
 
     .feature {
