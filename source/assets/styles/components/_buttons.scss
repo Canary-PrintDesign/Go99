@@ -20,7 +20,6 @@
     color: $color;
     background: $color-bg-primary-active;
     border-color: $color-border-primary-active;
-
   }
 }
 
@@ -51,8 +50,8 @@ button {
     @include colored-button($color-primary, transparent, $color-primary);
   }
 
-  &.btn-inverse.btn-outline {
-    @include colored-button($white, transparent, $white);
+  &.btn-dark.btn-outline {
+    @include colored-button($white, $black, $white);
   }
 }
 
@@ -96,7 +95,7 @@ button {
     }
   }
 
-  &.btn-inverse.btn-outline {
+  &.btn-dark.btn-outline {
     .btn-addon,
     .btn-content {
       border: 0;
