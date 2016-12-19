@@ -1,8 +1,13 @@
+$size-small-dot: 12px;
+$size-large-dot: 24px;
+
 .index .features-section {
   background: url('../images/features-bg.jpg') top center / cover fixed;
   z-index: 1;
 
   .features-slider {
+    padding-bottom: 6rem;
+
     .slide {
       width: 100%;
 
@@ -36,6 +41,65 @@
       &.next {
         right: auto;
         left: calc(50% + 200px);
+      }
+    }
+
+    .flickity-page-dots {
+      bottom: 4rem;
+
+      .dot {
+        @include size($size-small-dot);
+        background: $white;
+        border: 1px solid $white;
+        opacity: 1;
+
+        &.is-selected {
+          background: $color-primary;
+        }
+
+        &:nth-child(4) {
+          @include size($size-large-dot);
+          @include transform(translateY(#{($size-large-dot - $size-small-dot) / 2}));
+          margin: 0 2rem;
+        }
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        background: url(../images/bottom-bracket.png);
+        width: 120px;
+        top: 20px;
+        padding-top: 20px;
+        background-size: 120px;
+        background-position: top center;
+        background-repeat: no-repeat;
+      }
+
+      &::before {
+        content: 'Shippers';
+        right: calc(50% + 30px);
+      }
+
+      &::after {
+        content: 'Drivers';
+        left: calc(50% + 31px);
+      }
+    }
+
+    &.selected-0,
+    &.selected-1,
+    &.selected-2 {
+      .flickity-page-dots::before {
+        color: $color-primary;
+      }
+    }
+
+    &.selected-4,
+    &.selected-5,
+    &.selected-6 {
+      .flickity-page-dots::after {
+        color: $color-primary;
       }
     }
   }

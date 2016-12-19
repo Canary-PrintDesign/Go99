@@ -36,7 +36,7 @@ title: Go99
 
 <section class="features-section inverse" id="features">
   <h2><%= inline_svg 'logo-rev.svg' %> Will<br class="mbl-break"> Change Your Business</h2>
-  <div class="features-slider" data-flickity='{ "wrapAround": true }'>
+  <div class="features-slider">
     <%- data[:index][:user_slides].each_with_index do |driver_slide, i| %>
       <div class="slide">
         <%= image_tag driver_slide[:image], class: 'slide-image' %>
@@ -49,7 +49,6 @@ title: Go99
       </div>
     <%- end %>
   </div>
-
   <%= partial 'partials/pages/index/scroll_link', locals: { target: '#download' } %>
 </section>
 
