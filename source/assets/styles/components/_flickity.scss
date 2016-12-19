@@ -36,4 +36,25 @@
       content: 'next';
     }
   }
+
+  .inverse & {
+    background: none;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.previous::before {
+      background-image: url('../images/icon-rightchevrons-white.svg');
+    }
+
+    &.next::before {
+      background-image: url('../images/icon-leftchevrons-white.svg');
+    }
+
+    &::after {
+      color: $white;
+    }
+  }
 }

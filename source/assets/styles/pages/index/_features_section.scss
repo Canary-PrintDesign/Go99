@@ -2,144 +2,41 @@
   background: url('../images/features-bg.jpg') top center / cover fixed;
   z-index: 1;
 
-  .user-type-toggle {
-    margin: 1.5rem 0 6rem;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  input:not(:checked) + label {
-    color: $color-muted;
-  }
-
-  .sales-pitch {
-    @include flex-grow(1);
-    h3 {
-      margin-top: -0.1em; // Vertically align with top of letters
-    }
-  }
-
-  .phone-demo-container {
-    height: 390px;
-    float: right;
-  }
-
-  .slide {
-    width: 100%;
-
-    h5 {
-      margin-top: 0;
-    }
-
-    &-image {
-      float: right;
-      width: 60%;
-      margin-left: 2rem;
-      margin-top: -2rem;
-    }
-  }
-
-  .app-links {
-    position: relative;
-    margin-top: 12rem;
-    z-index: 1;
-  }
-
-  &.driver .shippers-only,
-  &.shipper .drivers-only {
-    display: none;
-  }
-
-  @media (max-width: 499px) {
-    .user-type-toggle {
-      @include display(flex);
-      @include justify-content(center);
-
-      label {
-        &:first-of-type {
-          text-align: right;
-        }
-
-        &:last-of-type {
-          text-align: left;
-        }
-      }
-    }
-  }
-
-  @media (min-width: 500px) {
-    br.tiny-break {
-      display: none;
-    }
-  }
-
-  @media (max-width: $screen-md-max) {
-    .features-slider {
-      // enable flickity for small screens
-      &:after {
-        display: none;
-        content: 'flickity';
-      }
-
-      img {
-        display: none;
-      }
-    }
-
-    .flickity-page-dots {
-      position: relative;
-      bottom: auto;
-      margin: 1rem auto 3rem;
-
-      .dot {
-        @include size(0.8em);
-        border: 1px solid $white;
-
-        &.is-selected {
-          background: $color-primary;
-        }
-      }
-    }
-
-    .app-links {
-      display: none;
-    }
-  }
-
-  @media (min-width: $screen-lg-min) {
-    .sticky-zone {
-      height: 2000px;
-    }
-
-    .features-slider {
-      // enable scroll slider for large screens
-      &:after {
-        display: none;
-        content: 'scroll-slider';
-      }
-    }
-
-    .sticky-slider {
-      position: absolute;
-      top: 0;
+  .features-slider {
+    .slide {
       width: 100%;
 
-      > .container {
-        @include display(flex);
-        @include flex-direction(column);
-        @include justify-content(center);
-        height: 100vh;
+      img {
+        display: block;
+        margin: 2rem auto;
+        border: 2px solid $black;
+        border-radius: 12px;
+      }
+
+      .text {
+        max-width: 24rem;
+        margin: 0 auto;
+        text-align: center;
+
+        &-container {
+          background: transparentize(black, 0.5);
+          padding: 1rem;
+        }
       }
     }
 
-    .features-container {
-      @include display(flex);
-      box-sizing: border-box;
-    }
+    .flickity-prev-next-button {
+      top: 160px;
 
-    .slider-nav {
-      margin: 2rem;
+      &.previous {
+        left: auto;
+        right: calc(50% + 200px);
+      }
+
+      &.next {
+        right: auto;
+        left: calc(50% + 200px);
+      }
     }
   }
 }

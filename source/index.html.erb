@@ -35,50 +35,19 @@ title: Go99
 </section>
 
 <section class="features-section inverse" id="features">
-  <div class="sticky-zone">
-    <div class="sticky-slider" data-scroll-trigger-for="features">
-      <div class="container">
-        <h2><%= inline_svg 'logo-rev.svg' %> Will<br class="mbl-break"> Change Your Business</h2>
-        <div class="toggle-select-group user-type-toggle">
-          <input type="radio" name="user-type" value="shipper" id="toggle-shipper">
-          <label for="toggle-shipper">I pay to<br class="tiny-break"> ship loads</label>
-          <span class="toggle-select"></span>
-          <input type="radio" name="user-type" value="driver" id="toggle-driver" checked="">
-          <label for="toggle-driver">I get paid<br class="tiny-break"> to drive</label>
-        </div>
-        <div class="features-container">
-          <%- driver_slides = data[:index][:user_slides][:drivers] %>
-          <%- shipper_slides = data[:index][:user_slides][:shippers] %>
-          <ul data-scroll-slider-nav-for="features"></ul>
-          <div class="sales-pitch">
-            <div class="features-slider"
-                 data-flickity='{ "wrapAround": true, "prevNextButtons": false, "watchCSS": true }'
-                 data-scroll-slider='{ "name": "features", "watchCSS": true }'>
-              <%- driver_slides.each_with_index do |driver_slide, i| %>
-                <div class="slide">
-                  <div class="drivers-only">
-                    <%= image_tag driver_slide[:image], class: 'slide-image' %>
-                    <div class="text">
-                      <h5><%= driver_slide[:title] %></h5>
-                      <p><%= driver_slide[:subtitle] %></p>
-                    </div>
-                  </div>
-                  <%- shipper_slide = shipper_slides[i] %>
-                  <div class="shippers-only">
-                    <%= image_tag shipper_slide[:image], class: 'slide-image' %>
-                    <div class="text">
-                      <h5><%= shipper_slide[:title] %></h5>
-                      <p><%= shipper_slide[:subtitle] %></p>
-                    </div>
-                  </div>
-                </div>
-              <%- end %>
-            </div>
-            <%= partial 'partials/pages/index/app_links' %>
+  <h2><%= inline_svg 'logo-rev.svg' %> Will<br class="mbl-break"> Change Your Business</h2>
+  <div class="features-slider" data-flickity='{ "wrapAround": true }'>
+    <%- data[:index][:user_slides].each_with_index do |driver_slide, i| %>
+      <div class="slide">
+        <%= image_tag driver_slide[:image], class: 'slide-image' %>
+        <div class="text-container">
+          <div class="text">
+            <h4><%= driver_slide[:title] %></h4>
+            <p><%= driver_slide[:subtitle] %></p>
           </div>
         </div>
       </div>
-    </div>
+    <%- end %>
   </div>
 
   <%= partial 'partials/pages/index/scroll_link', locals: { target: '#download' } %>
