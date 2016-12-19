@@ -1,32 +1,4 @@
 -
-  title: Get More of the Work You Want
-  subtitle: |
-    Find more jobs with the Go99™ easy-to-search marketplace.
-    Find what you want, where you want, and when you want it!
-  image: slides/features-drive-getmore.png
-
--
-  title: Let Us Be Your Office Support
-  subtitle: |
-    Go99™ can take care of all your invoicing and collections,
-    leaving you free to do what you love doing – driving!
-  image: slides/features-drive-officesupport.png
-
--
-  title: Control Your Paperwork
-  subtitle: |
-    No more lost documentation.
-    From quotes to bills-of-lading to invoices and receipts – all in one place.
-  image: slides/features-drive-paperwork.png
-
--
-  title: Full Transparency
-  subtitle: |
-    Go99™ shows you who you are dealing with. You can see your
-    Carrier/Driver’s profile, their reputation, skills and documentation.
-  image: slides/features-neutral-transparency.png
-
--
   title: Better Communication
   subtitle: |
     Communicate directly with the driver using the Go99™ app.
@@ -47,3 +19,31 @@
     With its powerful interface you can sort by price or provider reputation.
     Power and Control is in your hands.
   image: slides/features-ship-easyaccess.png
+
+-
+  title: Full Transparency
+  subtitle: |
+    Go99™ shows you who you are dealing with. You can see your
+    Carrier/Driver’s profile, their reputation, skills and documentation.
+  image: slides/features-neutral-transparency.png
+
+-
+  title: Get More of the Work You Want
+  subtitle: |
+    Find more jobs with the Go99™ easy-to-search marketplace.
+    Find what you want, where you want, and when you want it!
+  image: slides/features-drive-getmore.png
+
+-
+  title: Let Us Be Your Office Support
+  subtitle: |
+    Go99™ can take care of all your invoicing and collections,
+    leaving you free to do what you love doing – driving!
+  image: slides/features-drive-officesupport.png
+
+-
+  title: Control Your Paperwork
+  subtitle: |
+    No more lost documentation.
+    From quotes to bills-of-lading to invoices and receipts – all in one place.
+  image: slides/features-drive-paperwork.png
