@@ -3,7 +3,7 @@ $size-large-dot: 24px;
 $border-radius-features: 12px;
 
 .index .features-section {
-  background: url('../images/features-bg.jpg') top center / cover fixed;
+  background: url('../images/features-bg.jpg') top center / cover;
   z-index: 1;
 
   .features-slider {
