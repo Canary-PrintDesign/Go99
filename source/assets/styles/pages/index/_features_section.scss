@@ -3,7 +3,7 @@ $size-large-dot: 24px;
 $border-radius-features: 12px;
 
 .index .features-section {
-  background: url('../images/features-bg.jpg') top center / cover;
+  background: url('../images/features-bg.jpg') center center / cover;
   z-index: 1;
 
   @media (max-width: 460px) {
@@ -105,20 +105,22 @@ $border-radius-features: 12px;
     .features-slider {
       .slide {
         img {
-          max-width: 70%;
+          max-width: 60%;
         }
       }
 
       .flickity-prev-next-button {
-        top: 23%;
+        top: 18%;
         padding: 0;
 
         &.previous {
-          left: 0;
+          left: .5rem;
+          transform: scale(.9);
         }
 
         &.next {
-          right: 0;
+          right: .5rem;
+          transform: scale(.9);
         }
       }
     }
