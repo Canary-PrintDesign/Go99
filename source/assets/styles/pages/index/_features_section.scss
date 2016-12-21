@@ -21,7 +21,7 @@ $border-radius-features: 12px;
       }
 
       .text {
-        max-width: 24rem;
+        max-width: 26rem;
         margin: 0 auto;
 
         &-container {
@@ -32,20 +32,8 @@ $border-radius-features: 12px;
     }
 
     .flickity-prev-next-button {
-      top: 160px;
-
       &::after {
         display: none;
-      }
-
-      &.previous {
-        left: auto;
-        right: calc(50% + 200px);
-      }
-
-      &.next {
-        right: auto;
-        left: calc(50% + 200px);
       }
     }
 
@@ -109,11 +97,81 @@ $border-radius-features: 12px;
     }
   }
 
+  @media (max-width: 474px) {
+    .features-slider {
+      .slide {
+        img {
+          max-width: 70%;
+        }
+      }
+
+      .flickity-prev-next-button {
+        top: 23%;
+        padding: 0;
+
+        &.previous {
+          left: 0;
+        }
+
+        &.next {
+          right: 0;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 475px) {
+    .features-slider {
+      .flickity-prev-next-button {
+        top: 160px;
+
+        &.previous {
+          left: auto;
+          right: calc(50% + 175px);
+        }
+
+        &.next {
+          right: auto;
+          left: calc(50% + 175px);
+        }
+      }
+    }
+  }
+
+  @media (min-width: 530px) {
+    .features-slider {
+      .flickity-prev-next-button {
+        &.previous {
+          left: auto;
+          right: calc(50% + 200px);
+        }
+
+        &.next {
+          right: auto;
+          left: calc(50% + 200px);
+        }
+      }
+    }
+  }
+
   @media (min-width: $screen-md-min) {
     .features-slider {
       .text-container {
         display: inline-block;
         border-radius: $border-radius-features;
+      }
+
+      .flickity-prev-next-button {
+        @include transform(scale(1.2));
+        top: 135px;
+
+        &.previous {
+          right: calc(50% + 250px);
+        }
+
+        &.next {
+          left: calc(50% + 250px);
+        }
       }
     }
   }
