@@ -34,6 +34,10 @@ $border-radius-features: 12px;
     .flickity-prev-next-button {
       top: 160px;
 
+      &::after {
+        display: none;
+      }
+
       &.previous {
         left: auto;
         right: calc(50% + 200px);
