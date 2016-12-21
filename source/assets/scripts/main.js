@@ -10,6 +10,5 @@ if (__BUILD__) {
   console.log("Welcome to Go99!");
 }
 
-require('components/feature_detection');
 require('pages/index');
 require('vendor/remodal.min.js');

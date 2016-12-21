@@ -12,11 +12,6 @@ $padding-homepage-section: 4rem;
       display: inline-block;
       max-height: 0.9em;
       max-width: 4.35em;
-
-      @at-root body.is-a-mac#{&} {
-        max-height: 0.83em;
-        max-width: 4em;
-      }
     }
   }
 
