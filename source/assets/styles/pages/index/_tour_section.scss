@@ -16,6 +16,7 @@ $breakpoint-tour-4-slides: 800px;
 
     .flickity-prev-next-button {
       opacity: .5;
+      z-index: 1;
 
       &:hover {
         opacity: 1;
