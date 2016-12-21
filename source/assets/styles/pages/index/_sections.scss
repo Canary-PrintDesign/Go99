@@ -10,9 +10,13 @@ $padding-homepage-section: 4rem;
     img,
     svg {
       display: inline-block;
-      max-height: 0.83em; // just for macs
-      max-width: 4.35em; // just for windows
-      max-tears: none; // just for laughs
+      max-height: 0.9em;
+      max-width: 4.35em;
+
+      @at-root body.is-a-mac#{&} {
+        max-height: 0.83em;
+        max-width: 4em;
+      }
     }
   }
 
