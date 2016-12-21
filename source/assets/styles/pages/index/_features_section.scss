@@ -6,6 +6,10 @@ $border-radius-features: 12px;
   background: url('../images/features-bg.jpg') top center / cover;
   z-index: 1;
 
+  @media (max-width: 460px) {
+    background-image: url('../images/features-bg-mobile.jpg');
+  }
+
   .features-slider {
     padding-bottom: 6rem;
 

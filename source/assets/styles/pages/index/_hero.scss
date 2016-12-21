@@ -2,6 +2,10 @@
   background: url('../images/hero-bg.jpg')  center center / cover;
   z-index: 1;
 
+  @media (max-width: 460px) {
+    background-image: url('../images/hero-bg-mobile.jpg');
+  }
+
   > .container {
     @include display(flex);
   }
