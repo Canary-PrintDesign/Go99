@@ -1,5 +1,6 @@
 $size-small-dot: 12px;
 $size-large-dot: 24px;
+$border-radius-features: 12px;
 
 .index .features-section {
   background: url('../images/features-bg.jpg') top center / cover fixed;
@@ -10,22 +11,22 @@ $size-large-dot: 24px;
 
     .slide {
       width: 100%;
+      text-align: center;
 
       img {
         display: block;
         margin: 2rem auto;
         border: 2px solid $black;
-        border-radius: 12px;
+        border-radius: $border-radius-features;
       }
 
       .text {
         max-width: 24rem;
         margin: 0 auto;
-        text-align: center;
 
         &-container {
           background: transparentize(black, 0.5);
-          padding: 1rem;
+          padding: 1rem 2rem;
         }
       }
     }
@@ -100,6 +101,15 @@ $size-large-dot: 24px;
     &.selected-6 {
       .flickity-page-dots::after {
         color: $color-primary;
+      }
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    .features-slider {
+      .text-container {
+        display: inline-block;
+        border-radius: $border-radius-features;
       }
     }
   }
