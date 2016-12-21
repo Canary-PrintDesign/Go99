@@ -9,6 +9,8 @@ configure :development do
   activate :livereload
 end
 
+activate :minify_html
+
 activate :external_pipeline,
          name: :webpack,
          command: build? ?
