@@ -1,5 +1,7 @@
 .page-footer {
   text-align: center;
+  background: $white;
+  overflow: auto; // prevent child margin overflow
 
   p {
     margin: 2rem auto;
