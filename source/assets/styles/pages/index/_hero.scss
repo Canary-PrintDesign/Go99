@@ -51,7 +51,8 @@
 
     .app-links {
       @include transform(scale(0.9));
-      @include transform-origin(top left);
+      @include transform-origin(top center);
+      text-align: center;
     }
   }
 

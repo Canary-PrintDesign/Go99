@@ -77,6 +77,8 @@ br.mbl-break {
 @media (max-width: $screen-md-max) {
   h1 {
     font-size: 8vw;
+    text-align: center;
+    margin: auto;
   }
 
   h2 {
@@ -91,6 +93,7 @@ br.mbl-break {
   h4,
   h5 {
     font-size: 5vw;
+    text-align: center;
   }
 
   br.mbl-break {
