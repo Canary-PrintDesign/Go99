@@ -1,7 +1,6 @@
 .index .hero {
   background: url('../images/hero-bg.jpg')  center center / cover;
   z-index: 1;
-  padding-bottom: 0;
 
   @media (max-width: 900px) {
     background-image: url('../images/hero-bg-mobile.jpg');
@@ -26,7 +25,7 @@
   }
 
   .phone-demo-container {
-    margin: 5rem 3rem 0;
+    margin: 5rem 3rem #{-$padding-homepage-section};
     height: 520px;
   }
 
@@ -60,7 +59,7 @@
     .phone-demo-container {
       @include transform(scale(0.9));
       margin: 0;
-      margin-bottom: -1.6rem;
+      margin-bottom: -5.6rem;
     }
   }
 
@@ -68,7 +67,7 @@
     .phone-demo-container {
       @include transform(scale(0.8));
       margin-top: -3.5rem;
-      margin-bottom: -3.3rem;
+      margin-bottom: -7.3rem;
     }
   }
 
