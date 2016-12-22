@@ -1,5 +1,3 @@
-console.log('background_fixed')
-
 $(window).scroll(function() {
   var scrolledY = $(window).scrollTop();
 });
@@ -25,6 +23,10 @@ class BackgroundFixed {
       new BackgroundFixed(el);
     });
     BackgroundFixed.checkScroll();
+  }
+
+  static fix() {
+    $('[data-background-fixed]').css('background-attachment', 'fixed');
   }
 
   static checkScroll() {
@@ -55,13 +57,18 @@ class BackgroundFixed {
   }
 
   select() {
-    console.log({select: this})
     bgHolder.css('background', this.background);
     return this;
   }
 }
 
-BackgroundFixed.init();
-$(window).on("scroll", BackgroundFixed.checkScroll);
+// We're only interested in shimming mobile devices
+// and we can't test for support directly
+if ( $(window).width() < 600 ) {
+  BackgroundFixed.init();
+  $(window).on("scroll", BackgroundFixed.checkScroll);
+} else {
+  BackgroundFixed.fix();
+}
 
 module.exports = BackgroundFixed;
