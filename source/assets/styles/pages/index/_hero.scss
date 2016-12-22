@@ -1,6 +1,7 @@
 .index .hero {
   background: url('../images/hero-bg.jpg')  center center / cover;
   z-index: 1;
+  padding-bottom: 0;
 
   @media (max-width: 960px) {
     background-attachment: fixed;
@@ -29,7 +30,7 @@
   }
 
   .phone-demo-container {
-    margin: 5rem 3rem #{-$padding-homepage-section};
+    margin: 5rem 3rem 0;
     height: 520px;
   }
 
