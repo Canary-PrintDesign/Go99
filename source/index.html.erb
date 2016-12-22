@@ -2,7 +2,7 @@
 title: Go99
 ---
 
-<section class="hero inverse" id="connecting">
+<section class="hero inverse" id="connecting" data-background-fixed="true">
   <div class="container">
     <div class="phone-demo-container"><div class="phone-demo-screen screen1"></div><div class="phone-demo"></div></div>
     <div class="sales-pitch">
@@ -34,7 +34,7 @@ title: Go99
   <%= partial 'partials/pages/index/scroll_link', locals: { target: '#features' } %>
 </section>
 
-<section class="features-section inverse" id="features">
+<section class="features-section inverse" id="features"  data-background-fixed="true">
   <h2><%= inline_svg 'logo-rev.svg' %> Will<br class="mbl-break"> Change Your Business</h2>
   <div class="features-slider">
     <%- data[:index][:user_slides].each_with_index do |driver_slide, i| %>
