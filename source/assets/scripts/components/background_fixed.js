@@ -64,11 +64,10 @@ class BackgroundFixed {
 
 // We're only interested in shimming mobile devices
 // and we can't test for support directly
-if ( $(window).width() < 600 ) {
+if ( $(window).width() < 768 ) {
   BackgroundFixed.init();
   $(window).on("scroll", BackgroundFixed.checkScroll);
-} else {
-  BackgroundFixed.fix();
 }
+
 
 module.exports = BackgroundFixed;
