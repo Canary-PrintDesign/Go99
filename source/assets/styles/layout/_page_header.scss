@@ -1,5 +1,5 @@
 .page-header {
-  @include transition(color 500ms);
+  @include transition(background-color 250ms);
   position: absolute;
   top: 0;
   width: 100%;
