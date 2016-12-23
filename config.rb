@@ -23,6 +23,8 @@ activate :external_pipeline,
 set :css_dir,    'assets/styles'
 ignore           '**/*.scss'
 set :js_dir,     'assets/scripts'
+ignore           'assets/scripts/*/*.js'
+ignore           'assets/scripts/main.js'
 set :images_dir, 'assets/images'
 
 activate :directory_indexes
