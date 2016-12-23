@@ -21,6 +21,7 @@ activate :external_pipeline,
          latency: 1
 
 set :css_dir,    'assets/styles'
+ignore           '**/*.scss'
 set :js_dir,     'assets/scripts'
 set :images_dir, 'assets/images'
 
