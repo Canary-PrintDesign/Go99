@@ -10,7 +10,7 @@ configure :development do
 end
 
 activate :minify_html
-page "/contact/mailer.php", :directory_index => false
+page "mailer.php", :directory_index => false
 
 activate :external_pipeline,
          name: :webpack,
