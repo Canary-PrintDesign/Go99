@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
     // My modifications to mailer script from:
     // http://blog.teamtreehouse.com/create-ajax-contact-form
     // Added input sanitizing to prevent injection
@@ -39,7 +39,8 @@
         if (mail($recipient, $subject, $email_content, $email_headers)) {
             // Set a 200 (okay) response code.
             http_response_code(200);
-            echo "Thank You! Your message has been sent.";
+            echo "Thank You! Your message has been sent. You will be redirected back to the website in 5 seconds.";
+            header( "refresh:5;url=http://go99.ca" );
         } else {
             // Set a 500 (internal server error) response code.
             http_response_code(500);
