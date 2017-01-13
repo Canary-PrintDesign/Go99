@@ -2,12 +2,11 @@
   <button data-remodal-action="close" class="remodal-close"><%= inline_svg 'icon-closewindow.svg' %></button>
   <h2>Drop Us a Line</h2>
 
-  <form id="ajax-contact" method="post" action="mailer.php">
+  <form id="ajax-contact" method="POST" action="mailer.php" >
     <div class="field form-name">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
     </div>
-
     <div class="field form-email">
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required>
@@ -17,9 +16,46 @@
       <label for="message">Message</label>
       <textarea id="message" name="message" required></textarea>
     </div>
-
     <div class="field">
       <button type="submit"><%= inline_svg 'icon-email.svg' %> Submit</button>
     </div>
   </form>
+  <div id="contactResponse">
+  </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+     $("#ajax-contact").submit(function(event)
+     {
+         /* stop form from submitting normally */
+         event.preventDefault();
+
+         /* get some values from elements on the page: */
+         var $form = $( this ),
+             $submit = $form.find( 'button[type="submit"]' ),
+             name_value = $form.find( 'input[name="name"]' ).val(),
+             email_value = $form.find( 'input[name="email"]' ).val(),
+             message_value = $form.find( 'textarea[name="message"]' ).val(),
+             url = $form.attr('action');
+
+         /* Send the data using post */
+         var posting = $.post( url, {
+                           name: name_value,
+                           email: email_value,
+                           message: message_value
+                       });
+
+         posting.done(function( data )
+         {
+             /* Put the results in a div */
+             $( "#contactResponse" ).html(data);
+
+             /* Change the button text. */
+             $submit.text('Sent, Thank you');
+
+             /* Disable the button. */
+             $submit.attr("disabled", true);
+         });
+    });
+</script>
