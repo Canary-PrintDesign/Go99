@@ -1,8 +1,16 @@
 .terms {
 
+  h2, h3 {
+    margin-top: 30px;
+  }
+
   h1 {
-    font-size: 44px;
+    font-size: 30px;
     color: #484848;
+  }
+
+  h2 {
+    font-size: 22px;
   }
 
   h3 {
@@ -12,12 +20,28 @@
     font-weight: 700;
   }
 
-  ol {
-    padding-top: 1em;
-    padding-left: 1em;
+  p {
+    margin-top: 8px;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    margin-left: 3em;
     li {
-      padding: 1em 0 1em 1em;
+      list-style-type: disc;
     }
+  }
+
+  .total-bot {
+    border-bottom: 3px double black;
+  }
+
+  .total-top {
+    border-top: 1px solid black;
+  }
+
+  .term-center {
+    text-align: center;
   }
 
   .terms-menu {
@@ -26,6 +50,14 @@
     float: left;
     position: fixed;
     word-wrap:break-word;
+
+    ul {
+      margin-left: 0;
+
+      li {
+        list-style-type: none;
+      }
+    }
   }
 
   .terms-content {
